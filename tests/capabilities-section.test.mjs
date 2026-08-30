@@ -19,6 +19,13 @@ const expectedCapabilities = [
   'GitHub',
   'Vercel',
   'AI-Assisted Development',
+  'Responsive UI',
+  'Information Architecture',
+  'Wireframing',
+  'Basic HTML & CSS',
+  'Prototyping',
+  'Claude',
+  'Website Maintenance',
 ];
 
 const skillsElement = { innerHTML: '' };
@@ -26,7 +33,7 @@ globalThis.document = { querySelector: selector => selector === '.skills' ? skil
 await import('../capabilities.js');
 const section = skillsElement.innerHTML;
 const cards = [...section.matchAll(/<li class="skill-card">([\s\S]*?)<\/li>/g)];
-assert.equal(cards.length, expectedCapabilities.length, 'Capabilities should render exactly 12 cards');
+assert.equal(cards.length, expectedCapabilities.length, 'Capabilities should render the complete approved card set');
 
 const renderedNames = cards.map(([, card]) => {
   const match = card.match(/<span class="skill-name">([^<]+)<\/span>/);
@@ -42,7 +49,9 @@ const iconPaths = cards.map(([, card]) => {
   return match[1];
 });
 
-assert.equal(new Set(iconPaths).size, expectedCapabilities.length, 'Each capability should have its own icon');
+assert.equal(new Set(iconPaths).size, expectedCapabilities.length - 1, 'Only Claude and AI-Assisted Development should share an icon');
+assert.equal(iconPaths[11], 'assets/icons/claude.svg', 'AI-Assisted Development should use the Claude logo');
+assert.equal(iconPaths[17], 'assets/icons/claude.svg', 'Claude should use the Claude logo');
 await Promise.all(iconPaths.map(iconPath => access(path.join(root, iconPath))));
 assert.match(html, /<script src="capabilities\.js"><\/script>/, 'Capabilities behavior should load on the page');
 

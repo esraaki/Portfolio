@@ -1,9 +1,14 @@
 .skills{margin-top:32px;padding-top:24px;line-height:normal}
 .skills>strong{display:block;font-size:13px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;margin-bottom:17px}
-.skills-grid{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0;padding:0}
-.skill-card{min-height:82px;background:#fff;border:1px solid #d9d9d4;border-radius:18px;padding:16px 18px;display:flex;align-items:center;gap:15px}
-.skill-card img{display:block;width:34px;height:34px;object-fit:contain;flex:0 0 34px}
-.skill-name{font-size:15px;font-weight:800;line-height:1.25}
-@media(max-width:950px){.skills-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:650px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skill-card{padding:14px;gap:12px}}
-@media(max-width:420px){.skills-grid{grid-template-columns:1fr}}
+.skills-grid{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:0;padding:0}
+.skill-card{min-height:62px;background:#fff;border:1px solid #d9d9d4;border-radius:14px;padding:11px 13px;display:flex;align-items:center;gap:11px}
+.skill-card img{display:block;width:28px;height:28px;object-fit:contain;flex:0 0 28px}
+.skill-card img[src$="framer.svg"]{filter:invert(27%) sepia(98%) saturate(2853%) hue-rotate(218deg) brightness(101%) contrast(107%)}
+.skill-card img[src$="html.svg"]{filter:invert(36%) sepia(98%) saturate(2228%) hue-rotate(353deg) brightness(96%) contrast(88%)}
+.skill-card img[src$="css.svg"]{filter:invert(31%) sepia(98%) saturate(1231%) hue-rotate(172deg) brightness(93%) contrast(101%)}
+.skill-card img[src$="claude.svg"]{filter:invert(54%) sepia(35%) saturate(1062%) hue-rotate(329deg) brightness(91%) contrast(88%)}
+.skill-name{font-size:13px;font-weight:800;line-height:1.2}
+@media(max-width:1050px){.skills-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:800px){.skills-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:360px){.skills-grid{grid-template-columns:1fr}}
