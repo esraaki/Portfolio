@@ -9,11 +9,8 @@ const html = await readFile(path.join(root, 'index.html'), 'utf8');
 const expectedCapabilities = [
   'Figma',
   'Framer',
-  'HTML',
-  'CSS',
   'Design Systems',
   'Figma Variables',
-  'Responsive Design',
   'Accessibility / ADA',
   'RTL Design',
   'GitHub',
@@ -24,7 +21,6 @@ const expectedCapabilities = [
   'Wireframing',
   'Basic HTML & CSS',
   'Prototyping',
-  'Claude',
   'Website Maintenance',
 ];
 
@@ -49,9 +45,8 @@ const iconPaths = cards.map(([, card]) => {
   return match[1];
 });
 
-assert.equal(new Set(iconPaths).size, expectedCapabilities.length - 1, 'Only Claude and AI-Assisted Development should share an icon');
-assert.equal(iconPaths[11], 'assets/icons/claude.svg', 'AI-Assisted Development should use the Claude logo');
-assert.equal(iconPaths[17], 'assets/icons/claude.svg', 'Claude should use the Claude logo');
+assert.equal(new Set(iconPaths).size, expectedCapabilities.length, 'Each retained capability should have its own icon');
+assert.equal(iconPaths[8], 'assets/icons/claude.svg', 'AI-Assisted Development should use the Claude logo');
 await Promise.all(iconPaths.map(iconPath => access(path.join(root, iconPath))));
 assert.match(html, /<script src="capabilities\.js"><\/script>/, 'Capabilities behavior should load on the page');
 

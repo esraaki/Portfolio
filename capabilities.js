@@ -1,11 +1,8 @@
 const capabilities = [
   ['figma-color.svg', 'Figma'],
   ['framer.svg', 'Framer'],
-  ['html.svg', 'HTML'],
-  ['css.svg', 'CSS'],
   ['design-systems.svg', 'Design Systems'],
   ['figma-variables.svg', 'Figma Variables'],
-  ['responsive-design.svg', 'Responsive Design'],
   ['accessibility.svg', 'Accessibility / ADA'],
   ['rtl-design.svg', 'RTL Design'],
   ['github.svg', 'GitHub'],
@@ -16,7 +13,6 @@ const capabilities = [
   ['wireframing.svg', 'Wireframing'],
   ['html-css.svg', 'Basic HTML & CSS'],
   ['prototyping.svg', 'Prototyping'],
-  ['claude.svg', 'Claude'],
   ['website-maintenance.svg', 'Website Maintenance'],
 ];
 
