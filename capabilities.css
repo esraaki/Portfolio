@@ -1,0 +1,9 @@
+.skills{margin-top:32px;padding-top:24px;line-height:normal}
+.skills>strong{display:block;font-size:13px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;margin-bottom:17px}
+.skills-grid{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0;padding:0}
+.skill-card{min-height:82px;background:#fff;border:1px solid #d9d9d4;border-radius:18px;padding:16px 18px;display:flex;align-items:center;gap:15px}
+.skill-card img{display:block;width:34px;height:34px;object-fit:contain;flex:0 0 34px}
+.skill-name{font-size:15px;font-weight:800;line-height:1.25}
+@media(max-width:950px){.skills-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skill-card{padding:14px;gap:12px}}
+@media(max-width:420px){.skills-grid{grid-template-columns:1fr}}
