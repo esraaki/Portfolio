@@ -1,0 +1,11 @@
+.hero{position:relative;isolation:isolate;min-height:650px;overflow:hidden}
+.hero-installation{position:absolute;z-index:0;inset:-72px -12px 0 50%;height:650px;overflow:hidden;touch-action:pan-y pinch-zoom}
+.hero-installation[hidden]{display:none}
+.hero-installation canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-object{position:absolute;width:var(--object-size);height:var(--object-size);transform:translate(-50%,-50%) rotate(var(--object-angle));transform-origin:50% 0;filter:drop-shadow(0 8px 12px #00000014);user-select:none;pointer-events:none;will-change:transform,left,top}
+.hero>.ey,.hero>h1,.hero>p{position:relative;z-index:2}
+.hero>p{background:linear-gradient(90deg,#fbfbfa 0%,#fbfbfaf2 72%,transparent 100%)}
+.hero-installation[data-mode="static"] .hero-object{will-change:auto}
+@media(max-width:850px){.hero-installation{inset:-64px -10px 0 58%;opacity:.7}}
+@media(max-width:600px){.hero{min-height:0}.hero-installation{inset:-64px -12px auto 56%;height:430px;opacity:.42}.hero>p{background:#fbfbfaf2}}
+@media(prefers-reduced-motion:reduce){.hero-object{will-change:auto}}

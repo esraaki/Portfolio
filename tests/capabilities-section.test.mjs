@@ -41,13 +41,16 @@ assert.deepEqual(renderedNames, expectedCapabilities, 'Capabilities should match
 const iconPaths = cards.map(([, card]) => {
   const match = card.match(/<img[^>]+src="([^"]+)"[^>]+alt=""/);
   assert.ok(match, 'Every capability card should have a decorative local icon');
-  assert.match(match[1], /^assets\/icons\/[a-z0-9-]+\.svg$/, 'Icons should use local SVG assets');
+  assert.match(match[1], /^assets\/icons\/[a-z0-9-]+\.(svg|png)$/, 'Icons should use local artwork');
   return match[1];
 });
 
 assert.equal(new Set(iconPaths).size, expectedCapabilities.length, 'Each retained capability should have its own icon');
 assert.equal(iconPaths[8], 'assets/icons/claude.svg', 'AI-Assisted Development should use the Claude logo');
+for (const [index, name] of [[2, 'design-systems'], [3, 'figma-variables'], [4, 'accessibility'], [5, 'rtl-design'], [13, 'prototyping'], [14, 'website-maintenance']]) {
+  assert.equal(iconPaths[index], `assets/icons/${name}.png`, 'Updated cards should use the supplied PNG artwork');
+}
 await Promise.all(iconPaths.map(iconPath => access(path.join(root, iconPath))));
 assert.match(html, /<script src="capabilities\.js"><\/script>/, 'Capabilities behavior should load on the page');
 
-console.log(`Verified ${cards.length} capability cards and ${iconPaths.length} local SVG icons.`);
+console.log(`Verified ${cards.length} capability cards and ${iconPaths.length} local icons, including six replacement PNGs.`);

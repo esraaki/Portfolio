@@ -1,10 +1,10 @@
 const capabilities = [
   ['figma-color.svg', 'Figma'],
   ['framer.svg', 'Framer'],
-  ['design-systems.svg', 'Design Systems'],
-  ['figma-variables.svg', 'Figma Variables'],
-  ['accessibility.svg', 'Accessibility / ADA'],
-  ['rtl-design.svg', 'RTL Design'],
+  ['design-systems.png', 'Design Systems'],
+  ['figma-variables.png', 'Figma Variables'],
+  ['accessibility.png', 'Accessibility / ADA'],
+  ['rtl-design.png', 'RTL Design'],
   ['github.svg', 'GitHub'],
   ['vercel.svg', 'Vercel'],
   ['claude.svg', 'AI-Assisted Development'],
@@ -12,8 +12,8 @@ const capabilities = [
   ['information-architecture.svg', 'Information Architecture'],
   ['wireframing.svg', 'Wireframing'],
   ['html-css.svg', 'Basic HTML & CSS'],
-  ['prototyping.svg', 'Prototyping'],
-  ['website-maintenance.svg', 'Website Maintenance'],
+  ['prototyping.png', 'Prototyping'],
+  ['website-maintenance.png', 'Website Maintenance'],
 ];
 
 const skills = document.querySelector('.skills');
