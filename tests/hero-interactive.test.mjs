@@ -40,7 +40,7 @@ const impulse = getPointerImpulse({
   movementY: 3,
   radius: 80,
 });
-assert.ok(impulse.x > 1, 'A nearby pointer sweep should create a visible horizontal impulse');
+assert.ok(impulse.x > 1.5, 'A nearby pointer sweep should create a fluid, clearly visible horizontal impulse');
 assert.ok(impulse.strength > 1, 'A nearby pointer sweep should cross the chime disturbance threshold');
 assert.deepEqual(
   getPointerImpulse({ bobX: 100, bobY: 100, pointerX: 400, pointerY: 400, movementX: 20, movementY: 20, radius: 80 }),
@@ -56,9 +56,14 @@ const fastImpulse = getPointerImpulse({
   movementY: 100,
   radius: 80,
 });
-assert.ok(Math.abs(fastImpulse.x) <= 2.25 && Math.abs(fastImpulse.y) <= 1.5, 'Fast sweeps should stay polished rather than launching objects');
+assert.ok(Math.abs(fastImpulse.x) >= 5, 'A deliberate fast sweep should create clearly visible orb travel');
+assert.ok(Math.abs(fastImpulse.x) <= 6.5 && Math.abs(fastImpulse.y) <= 2.5, 'Fast sweeps should stay polished rather than launching objects');
 
 assert.equal(HERO_OBJECTS.length, 3, 'The installation should expose three replaceable objects');
+assert.ok(
+  Math.max(...HERO_OBJECTS.map(object => object.length)) - Math.min(...HERO_OBJECTS.map(object => object.length)) >= 90,
+  'The three strings should have clearly distinct lengths',
+);
 assert.deepEqual(
   HERO_OBJECTS.map(object => object.asset),
   [2, 4, 5].map(number => `assets/hero-interactive/object-orb-${number}.svg`),
@@ -101,6 +106,8 @@ await retrySound.enable();
 assert.equal(retrySound.enabled, true, 'A later gesture must be able to retry audio unlock');
 
 const html = await readFile(path.join(root, 'index.html'), 'utf8');
+const heroScript = await readFile(path.join(root, 'hero-interactive.js'), 'utf8');
+assert.doesNotMatch(heroScript, /now - item\.lastImpulse < 130/, 'Visual movement should not be discarded by an interaction throttle');
 assert.match(html, /class="hero-installation"/, 'Hero should contain the isolated installation mount');
 assert.match(html, /hero-interactive\.css/, 'Interactive hero styles should load independently');
 assert.match(html, /hero-interactive\.js/, 'Interactive hero behavior should load independently');

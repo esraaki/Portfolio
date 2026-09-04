@@ -89,7 +89,7 @@ if (root && ENABLE_INTERACTIVE_HERO) {
       image.draggable = false;
       image.style.setProperty('--object-size', `${layout.size}px`);
       root.appendChild(image);
-      return { config, layout, anchor: composite.particles[0], bob: composite.particles[1], image, lastImpulse: -Infinity };
+      return { config, layout, anchor: composite.particles[0], bob: composite.particles[1], image };
     });
     // Start at the solver's resting position, not with a visible gravity drop.
     if (mode !== 'static') for (let i = 0; i < 120; i += 1) engine.frame(6);
@@ -115,9 +115,6 @@ if (root && ENABLE_INTERACTIVE_HERO) {
 
   function applyImpulse(item, impulse) {
     if (!impulse.strength || mode === 'static') return;
-    const now = performance.now();
-    if (now - item.lastImpulse < 130) return;
-    item.lastImpulse = now;
     item.bob.pos.x += impulse.x;
     item.bob.pos.y += impulse.y;
     sound.disturb(item.config.id, impulse.strength, item.config.note);

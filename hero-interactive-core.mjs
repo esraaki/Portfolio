@@ -1,7 +1,7 @@
 export const HERO_OBJECTS = [
-  { id: 'orb-2', asset: 'assets/hero-interactive/object-orb-2.svg', x: 0.41, length: 305, size: 38, note: 'E5' },
-  { id: 'orb-4', asset: 'assets/hero-interactive/object-orb-4.svg', x: 0.59, length: 290, size: 40, note: 'B5' },
-  { id: 'orb-5', asset: 'assets/hero-interactive/object-orb-5.svg', x: 0.68, length: 260, size: 43, note: 'D6' },
+  { id: 'orb-2', asset: 'assets/hero-interactive/object-orb-2.svg', x: 0.41, length: 335, size: 38, note: 'E5' },
+  { id: 'orb-4', asset: 'assets/hero-interactive/object-orb-4.svg', x: 0.59, length: 285, size: 40, note: 'B5' },
+  { id: 'orb-5', asset: 'assets/hero-interactive/object-orb-5.svg', x: 0.68, length: 235, size: 43, note: 'D6' },
 ];
 
 export function getInteractionMode({ reducedMotion, coarsePointer, width }) {
@@ -17,7 +17,7 @@ export function shouldRunAnimation(mode, visible) {
 export function configureHeroPhysics(engine, mode) {
   // Paired restoring force and damping: sub-pixel rest within one second at 60Hz.
   engine.gravity.y = 4;
-  engine.friction = mode === 'simplified' ? 0.79 : 0.8;
+  engine.friction = mode === 'simplified' ? 0.805 : 0.8;
 }
 
 export function getOrbLayout(object, index, compact, height) {
@@ -66,8 +66,8 @@ export function getPointerImpulse({ bobX, bobY, pointerX, pointerY, movementX, m
   const separation = proximity * 1.8;
   const clamp = (value, limit) => Math.max(-limit, Math.min(limit, value));
   return {
-    x: clamp(movementX * proximity * 0.18 + (distance ? dx / distance : 1) * separation * 0.45, 2.25),
-    y: clamp(movementY * proximity * 0.12 + (distance ? dy / distance : 0) * separation * 0.45, 1.5),
+    x: clamp(movementX * proximity * 0.38 + (distance ? dx / distance : 1) * separation * 0.5, 6.5),
+    y: clamp(movementY * proximity * 0.18 + (distance ? dy / distance : 0) * separation * 0.5, 2.5),
     strength: proximity * pointerSpeed * 0.48,
   };
 }

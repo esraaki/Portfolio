@@ -10,7 +10,7 @@ for (const [index, object] of HERO_OBJECTS.entries()) {
 const touch = { mode: 'simplified', bobX: 100, bobY: 300, pointerX: 100, pointerY: 300, size: 32 };
 const tap = getTouchImpulse(touch);
 assert.ok(tap.strength > 0 && tap.x !== 0, 'A stationary tap should move the orb without a hover event');
-assert.ok(Math.abs(tap.x) <= 2.25, 'Touch should preserve the subtle impulse limit');
+assert.ok(Math.abs(tap.x) <= 6.5, 'Touch should preserve the controlled impulse limit');
 assert.equal(getTouchImpulse({ ...touch, mode: 'static' }).strength, 0, 'Reduced motion must ignore taps');
 assert.equal(getTouchImpulse({ ...touch, pointerX: 240 }).strength, 0, 'Touches outside the orb should not disturb it');
 for (const fps of [30, 60, 120]) {

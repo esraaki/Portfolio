@@ -21,7 +21,7 @@ for (const mode of ['full', 'simplified']) {
     const restY = bob.pos.y;
     // Multiple maximum-strength samples before release, not just a single nudge.
     for (let frame = 0; frame < 30; frame += 1) {
-      if (frame % 8 === 0) { bob.pos.x += 2.25; bob.pos.y += 1.5; }
+      if (frame % 8 === 0) { bob.pos.x += 6.5; bob.pos.y += 2.5; }
       engine.frame(6);
     }
     let maximumLateOffset = 0;
