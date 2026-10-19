@@ -226,3 +226,17 @@
 @keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(39,215,99,.55)}70%{box-shadow:0 0 0 8px rgba(39,215,99,0)}100%{box-shadow:0 0 0 0 rgba(39,215,99,0)}}
 @media(max-width:800px){.hero-meta{padding-top:8px}.hero-meta::after{font-size:8px}.hero-loop-art{right:-20%!important;width:94%!important}.hero-foot{transform:none}.folder.ai .single-peek{width:58%;right:0}.project-links .url-link,.project-links a.url-link{font-size:17px!important}}
 @media(prefers-reduced-motion:reduce){.project-links .url-link::before,.project-links a.url-link::before{animation:none}}
+
+/* Final hero spacing / artwork visibility pass */
+.hero{justify-content:flex-start!important;padding-top:3.2vh!important}
+.hero-meta{padding-top:8px!important;margin-bottom:0!important}
+.hero-stage{overflow:visible!important;margin:1.2vh 0 0!important;min-height:54vh!important}
+.hero-stage h1{padding-top:2vh!important;padding-bottom:2vh!important}
+.hero-loop-art{right:-10%!important;top:56%!important;width:66%!important;height:108%!important;overflow:visible!important}
+.hero-foot{transform:translateY(-46px)!important;padding-top:0!important}
+@media(max-width:800px){
+  .hero{padding-top:18px!important}
+  .hero-stage{overflow:visible!important;margin:8px 0 0!important}
+  .hero-loop-art{right:-23%!important;top:54%!important;width:100%!important;height:78%!important}
+  .hero-foot{transform:translateY(-14px)!important}
+}
