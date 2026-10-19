@@ -193,3 +193,6 @@
   .case-copy h2,.case-split h2{font-size:clamp(38px,11vw,50px)}
   .project-links .url-link,.project-links a.url-link{font-size:16px!important}
 }
+
+/* Clerkware case-study imagery */
+.clerkware-full{padding:5vw 0;background:#eee9e0!important}.clerkware-full img{width:min(980px,92vw)!important;max-width:none!important;height:auto!important;object-fit:contain;margin:auto}.project-page .case-copy>p{max-width:780px}
