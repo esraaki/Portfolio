@@ -167,3 +167,29 @@
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   .motion-ready .reveal-on-scroll{opacity:1!important;transform:none!important}
 }
+
+/* 2026-10-19 heading scale refinement */
+.hero-stage h1{font-size:clamp(56px,7vw,108px)}
+.work-intro h2,.beyond h2,.about h2{font-size:clamp(52px,6.5vw,92px)}
+.contact h2{font-size:clamp(62px,7vw,94px)}
+.folder-copy h3{font-size:76px}
+.category-heading-row h1,.category-hero h1{font-size:clamp(62px,7vw,108px)}
+.project-meta h2{font-size:46px}
+.hero-card .project-meta h2{font-size:62px}
+.project-hero h1{font-size:clamp(58px,7.2vw,108px);line-height:.88}
+.case-copy h2,.case-split h2{font-size:58px}
+.case-quote p{font-size:clamp(46px,5.5vw,78px)}
+.athar-copy h2{font-size:72px}
+.coming h2{font-size:60px}
+.live-invite h2{font-size:54px}
+.project-links{gap:18px;align-items:center}
+.project-links .url-link,.project-links a.url-link{font-size:17px!important;line-height:1.35;padding:8px 0!important;border-bottom-width:3px}
+@media(max-width:800px){
+  .hero-stage h1{font-size:clamp(44px,13vw,66px)}
+  .work-intro h2,.beyond h2,.about h2{font-size:clamp(44px,12vw,62px)}
+  .category-heading-row h1,.category-hero h1{font-size:clamp(48px,14vw,68px)}
+  .project-meta h2,.hero-card .project-meta h2{font-size:clamp(34px,10vw,46px)}
+  .project-hero h1{font-size:clamp(46px,13vw,68px)}
+  .case-copy h2,.case-split h2{font-size:clamp(38px,11vw,50px)}
+  .project-links .url-link,.project-links a.url-link{font-size:16px!important}
+}
