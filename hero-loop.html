@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hero loop</title>
+<style>
+:root{--bg:#1838FF;box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);overflow:hidden}
+svg{display:block;width:100%;height:100%}
+.float{animation:fl 5s ease-in-out infinite alternate}
+@keyframes fl{from{transform:translateY(5px) rotate(.2deg)}to{transform:translateY(-9px) rotate(-.2deg)}}
+.a{animation:em var(--d) linear infinite;animation-delay:var(--l);opacity:0;transform-origin:0 0}
+@keyframes em{
+ 0%{opacity:0;transform:translate(var(--sx),var(--sy)) scale(.15,.1);animation-timing-function:cubic-bezier(.2,.9,.25,1.15)}
+ 10%{opacity:1}
+ 34%{opacity:1;transform:translate(0,0) scale(1,1);animation-timing-function:ease-in-out}
+ 70%{opacity:1;transform:translate(calc(var(--ex)*.7),calc(var(--ey)*.7)) scale(1.03,1.03);animation-timing-function:ease-in}
+ 100%{opacity:0;transform:translate(var(--rx),var(--ry)) scale(.3,.2)}
+}
+.ln{fill:none;stroke-width:1.4;stroke-linecap:round;stroke-dasharray:1 1;stroke-dashoffset:1;animation:dr var(--d) ease-in-out infinite;animation-delay:var(--l)}
+@keyframes dr{0%{stroke-dashoffset:1}45%{stroke-dashoffset:0}100%{stroke-dashoffset:-1}}
+@media (prefers-reduced-motion:reduce){.a,.ln,.float{animation-play-state:paused}.a{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1614 975" preserveAspectRatio="xMaxYMid slice" aria-label="Animated web design hero">
+<defs>
+<linearGradient id="base" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4d9ff"/><stop offset="1" stop-color="#8a98ff"/></linearGradient>
+<linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2cc4"/><stop offset="1" stop-color="#0c1a86"/></linearGradient>
+</defs>
+<rect width="1614" height="975" fill="#1838FF"/>
+<g id="lines">
+<path id="p1" class="ln" pathLength="1" stroke="#fff" style="--d:7s;--l:-1s" d="M1400,175 C1480,190 1500,245 1485,295"/>
+<path id="p2" class="ln" pathLength="1" stroke="#d7ff3c" style="--d:6s;--l:-3s" d="M1515,375 C1580,430 1550,495 1480,513"/>
+<path id="p3" class="ln" pathLength="1" stroke="#fff" style="--d:8s;--l:-2s" d="M700,315 L700,440 L800,484"/>
+<path id="p4" class="ln" pathLength="1" stroke="#d7ff3c" style="--d:5s;--l:-1.5s" d="M657,368 L720,392"/>
+<path id="p5" class="ln" pathLength="1" stroke="#fff" style="--d:9s;--l:-4s" d="M1485,270 L1545,247"/>
+</g>
+<g id="back"></g>
+<g class="float">
+<polygon points="1040,545 1140,282 1500,440 1400,732" fill="url(#scr)"/>
+<polygon points="1058,552 1146,318 1470,455 1385,715" fill="#2640d8" opacity=".35"/>
+</g>
+<g id="mid"></g>
+<g class="float" style="animation-delay:-.4s">
+<polygon points="773,607 1035,563 1395,730 1135,795" fill="url(#base)"/>
+<polygon points="773,607 1135,795 1135,803 773,615" fill="#7f8dff"/>
+<polygon points="930,602 1045,582 1330,712 1215,737" fill="#1a2896"/>
+<g id="keys" stroke="#5f73ff" stroke-width="3.2" stroke-dasharray="6 5" opacity=".8"></g>
+<polygon points="905,648 1010,632 1100,672 990,694" fill="#a5b1ff" opacity=".55"/>
+</g>
+<g id="front"></g>
+<circle r="9" fill="#fff"><animateMotion dur="5s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".5 0 .5 1"><mpath href="#p3"/></animateMotion></circle>
+<circle r="7" fill="#ff7a8a"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#p5"/></animateMotion></circle>
+<circle r="9" fill="#d7ff3c"><animateMotion dur="3.6s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+<rect x="-12" y="-12" width="24" height="24" rx="3" fill="#d7ff3c"><animateMotion dur="4.4s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion><animateTransform attributeName="transform" type="rotate" values="0;90;0" dur="4.4s" repeatCount="indefinite" additive="sum"/></rect>
+<rect x="-16" y="-16" width="32" height="32" rx="3" fill="#ff7a8a"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></rect>
+</svg>
+<script>
+const NS='http://www.w3.org/2000/svg',C=[1230,480];
+const W='rgba(255,255,255,.94)',L='#b4c0ff',B='#8fa8ff',N='#2a44ff';
+const r=(x,y,w,h,f,rx=3,x2='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" ${x2}/>`;
+const ls=(x,y,w,n,g=9,c=L)=>Array.from({length:n},(_,i)=>r(x,y+i*g,i%3==2?w*.6:w,3,c,1.5)).join('');
+const cards={
+list:`${r(-47,-92,94,184,W,4)}${[0,1,2].map(i=>`<circle cx="-28" cy="${-64+i*42}" r="8" fill="${i==2?'#1a2aa8':B}"/>${ls(-14,-70+i*42,50,3,8)}`).join('')}`,
+hero:`${r(-160,-120,320,240,W,5)}${r(-142,-102,24,4,N,2)}${r(-140,-80,220,110,B,4)}${r(-20,-40,70,50,'#5b83ff',3)}${r(-140,50,46,16,N,8)}${ls(-70,44,200,3,10)}${ls(-140,80,280,3,9)}<path d="M20,-96 H120" stroke="${N}" stroke-width="3" stroke-dasharray="14 9"/>`,
+dark:`${r(-95,-115,190,230,'#101c8f',4)}${r(-75,-98,40,4,'#fff',2)}${ls(-75,-70,150,14,11,'rgba(180,195,255,.45)')}`,
+prof:`${r(-95,-60,190,120,W,5)}<circle cx="-52" cy="0" r="30" fill="${B}"/>${ls(-8,-26,80,5,12)}`,
+grid:`${r(-95,-75,190,150,W,5)}${[0,1,2].map(i=>r(-82+i*56,-60,48,40,B,3)+ls(-82+i*56,-10,44,4,8)).join('')}`,
+glass:`${r(-100,-115,200,230,'rgba(255,255,255,.2)',4,'stroke="rgba(255,255,255,.55)" stroke-width="1.2"')}`,
+cursor:`${r(-95,-55,190,110,'#3a5cff',4,'opacity=".85"')}<path d="M-12,-22 L-12,16 L-3,8 L5,22 L11,19 L3,5 L15,5Z" fill="#fff"/>`,
+frame:`${r(-110,-62,220,124,'none',4,'stroke="#fff" stroke-width="1.4"')}${r(-110,-62,220,20,'rgba(255,255,255,.12)',4)}`,
+frame2:`${r(-80,-45,160,90,'none',4,'stroke="#fff" stroke-width="1.2"')}${r(-65,-28,60,12,'rgba(255,255,255,.35)',2)}`,
+bars:`${r(-65,-48,130,96,W,5)}${[30,55,40,70,50].map((h,i)=>r(-50+i*22,36-h*.7,14,h*.7,i==3?N:B,2)).join('')}`,
+pill:`${r(-45,-16,90,32,W,16)}<circle cx="26" cy="0" r="11" fill="${N}"/>`,
+tabs:`${r(-90,-18,180,36,'rgba(255,255,255,.22)',6)}${[0,1,2].map(i=>r(-80+i*56,-9,46,18,i==1?W:'rgba(255,255,255,.4)',9)).join('')}`
+};
+// [key, layer, x, y, skew, duration, delay, driftX, driftY]
+const E=[
+['glass','back',870,455,22,7,-1,-70,-30],
+['frame','back',1010,215,22,8,-5,20,-60],
+['dark','back',1350,400,22,6.5,-2.5,60,10],
+['frame2','back',740,380,22,9,-6,-60,10],
+['cursor','mid',1205,215,22,5.5,-.5,40,-70],
+['hero','front',1085,420,22,7,-3.5,-40,-30],
+['list','front',825,325,22,6,-1.5,-70,-40],
+['prof','front',1425,340,22,6.2,-4,80,-30],
+['grid','front',1300,560,22,6.8,-2,70,40],
+['bars','front',1130,640,22,7.5,-6.2,-20,70],
+['pill','front',960,520,22,5,-3,-80,20],
+['tabs','mid',1420,560,22,8,-4.5,60,60]
+];
+E.forEach(([k,ly,x,y,sk,d,l,ex,ey])=>{
+ const g=document.createElementNS(NS,'g');g.setAttribute('transform',`translate(${x},${y})`);
+ const a=document.createElementNS(NS,'g');a.setAttribute('class','a');
+ a.style.cssText=`--d:${d}s;--l:${l}s;--sx:${C[0]-x}px;--sy:${C[1]-y}px;--ex:${ex}px;--ey:${ey}px;--rx:${(C[0]-x)*.5+ex*.3}px;--ry:${(C[1]-y)*.5+ey*.3}px`;
+ a.innerHTML=`<g transform="skewY(${sk})">${cards[k]}</g>`;
+ g.appendChild(a);document.getElementById(ly).appendChild(g);
+});
+// keyboard rows
+const kp=[[930,602],[1045,582],[1330,712],[1215,737]],kg=document.getElementById('keys');
+for(let i=0;i<5;i++){const t=(i+.5)/5,x1=kp[0][0]+(kp[3][0]-kp[0][0])*t,y1=kp[0][1]+(kp[3][1]-kp[0][1])*t,x2=kp[1][0]+(kp[2][0]-kp[1][0])*t,y2=kp[1][1]+(kp[2][1]-kp[1][1])*t;
+ kg.insertAdjacentHTML('beforeend',`<line x1="${x1+8}" y1="${y1-2}" x2="${x2-8}" y2="${y2-2}"/>`)}
+</script>
+</body>
+</html>
