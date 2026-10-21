@@ -5,3 +5,10 @@ const revealTargets=document.querySelectorAll('main > section:not(.hero), .worki
 revealTargets.forEach(el=>el.classList.add('reveal-on-scroll'));
 const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('revealed');revealObserver.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});
 revealTargets.forEach(el=>revealObserver.observe(el));
+
+// Fast CRT-style page opening for the desktop-folder navigation.
+document.querySelectorAll('.crt-link').forEach(link=>link.addEventListener('click',e=>{
+  if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||link.target==='_blank'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  e.preventDefault(); document.body.classList.add('crt-out'); const href=link.href;
+  setTimeout(()=>{location.href=href},330);
+}));
