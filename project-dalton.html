@@ -7,67 +7,67 @@
 <meta name="description" content="Dalton municipal website redesign case study: discovery, three visual directions, accessible UX decisions, and committee-approved designs by Esraa Salah."/>
 <link href="site.css" rel="stylesheet"/>
 <style>
-/* Dalton case study additions: intentionally scoped to this project. */
-.dalton-case .project-hero{padding-bottom:54px}
-.dalton-case .project-hero>p{max-width:900px}
+/* Scoped editorial refinements for Dalton. Main project visuals remain prominent. */
+.dalton-case{font-family:Arial,Helvetica,sans-serif}
+.dalton-case .project-hero{padding-bottom:46px}
+.dalton-case .project-hero h1{font-family:'Instrument Serif',Georgia,serif}
+.dalton-case .project-hero>p{font-size:clamp(18px,2vw,24px);line-height:1.45;max-width:850px}
 .dalton-case .project-hero .project-links .url-link::before{animation:none;background:#7a9f58;box-shadow:none}
-.dalton-case .project-snapshot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid #cbc8bf;gap:0;margin-top:35px}
-.dalton-case .project-snapshot div{padding:18px 16px 18px 0;min-width:0}
-.dalton-case .project-snapshot dt{font-size:10px;letter-spacing:.12em;font-weight:800;text-transform:uppercase;color:#666;margin-bottom:8px}
-.dalton-case .project-snapshot dd{margin:0;font-size:15px;font-weight:600;line-height:1.45}
-.dalton-case .visual-showcase{padding-top:42px;padding-bottom:76px}
-.dalton-case .case-copy{padding:76px 0;align-items:start}
-.dalton-case .case-copy h2{font-size:clamp(39px,4.4vw,63px)}
-.dalton-case .case-copy>p{max-width:740px;font-size:18px;line-height:1.6}
-.dalton-case .case-intro .case-summary{display:grid;gap:16px}
-.dalton-case .case-intro .case-summary p{margin:0;font-size:18px;line-height:1.6}
-.dalton-case .brief-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #cbc8bf;gap:14px;padding:0 0 70px}
-.dalton-case .brief-points article{border-top:2px solid #181818;padding:18px 8px 0 0}
-.dalton-case .brief-points b{font-size:17px;display:block;margin-bottom:8px}
-.dalton-case .brief-points p{font-size:15px;line-height:1.55;color:#555;margin:0}
-.dalton-case .direction-gallery{padding:24px 0 40px}
+.dalton-case .project-snapshot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid #cbc8bf;margin-top:34px}
+.dalton-case .project-snapshot div{padding:17px 14px 17px 0;min-width:0}
+.dalton-case .project-snapshot dt{font-size:11px;letter-spacing:.08em;font-weight:700;text-transform:uppercase;color:#666;margin-bottom:8px}
+.dalton-case .project-snapshot dd{margin:0;font-size:15px;font-weight:600;line-height:1.4}
+.dalton-case .visual-showcase{padding:35px 0 66px}
+.dalton-case .case-copy{padding:66px 0;gap:55px;align-items:start}
+.dalton-case .case-copy h2{font-family:Arial,Helvetica,sans-serif;font-size:clamp(34px,3.6vw,52px);font-weight:700;letter-spacing:-.045em;line-height:1.09}
+.dalton-case .case-copy>p,.dalton-case .case-summary p{font-size:17px;line-height:1.65;max-width:740px}
+.dalton-case .case-summary{display:grid;gap:14px}
+.dalton-case .case-summary p{margin:0}
+.dalton-case .brief-points{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;border-bottom:1px solid #c8c5bf;padding:0 0 58px}
+.dalton-case .brief-points article{border-top:1px solid #8e8a83;padding-top:15px}
+.dalton-case .brief-points b{display:block;font-size:17px;margin-bottom:7px}
+.dalton-case .brief-points p{font-size:15px;line-height:1.6;color:#4a4a4a;margin:0}
+.dalton-case .direction-gallery{padding:15px 0 35px}
 .dalton-case .direction-gallery figure{min-width:0}
-.dalton-case .direction-gallery figcaption{padding:19px}
-.dalton-case .direction-gallery figcaption strong{display:block;font-size:18px;margin-bottom:7px}
-.dalton-case .direction-gallery figcaption span{font-size:14px;line-height:1.45;display:block;font-weight:400;color:#555}
-.dalton-case .gallery-note{border-bottom:1px solid #cbc8bf;padding:0 0 72px;font-size:17px;line-height:1.5;max-width:900px}
-.dalton-case .gallery-note strong{color:var(--blue)}
-.dalton-case .section-heading{padding:80px 0 30px;display:flex;justify-content:space-between;gap:36px;align-items:end}
-.dalton-case .section-heading span,.dalton-case .outcome-eyebrow{font-size:11px;letter-spacing:.15em;font-weight:800}
-.dalton-case .section-heading h2{font:400 clamp(42px,5vw,72px)/.95 'Instrument Serif',serif;margin:12px 0 0;max-width:750px}
-.dalton-case .section-heading p{font-size:16px;line-height:1.55;max-width:340px;margin:0}
-.dalton-case .decision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#d0cdc6;border:1px solid #d0cdc6;margin-bottom:70px}
-.dalton-case .decision-grid article{background:#f2efe7;padding:29px;min-height:160px}
-.dalton-case .decision-grid small{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue)}
-.dalton-case .decision-grid h3{font-size:23px;line-height:1.12;margin:16px 0 9px}
-.dalton-case .decision-grid p{font-size:15px;line-height:1.55;margin:0;color:#444}
-.dalton-case .supporting-visuals{padding:18px 0 70px}
-.dalton-case .supporting-note{max-width:850px;font-size:17px;line-height:1.6;margin:0 0 70px}
-.dalton-case .outcome{border-top:1px solid #cbc8bf;padding-top:78px;padding-bottom:125px}
-.dalton-case .outcome-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;margin-bottom:40px}
-.dalton-case .outcome h2{font:400 clamp(46px,5vw,76px)/.95 'Instrument Serif',serif;margin:15px 0}
-.dalton-case .outcome-head p{font-size:18px;line-height:1.6;margin:0}
-.dalton-case .feedback-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:15px}
-.dalton-case .feedback-grid figure{margin:0;padding:32px;background:#fff;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
-.dalton-case .feedback-grid figure:first-child{background:#152ee4;color:#fff}
-.dalton-case .feedback-grid blockquote{font:400 clamp(26px,2.8vw,42px)/1.13 'Instrument Serif',serif;margin:18px 0 40px}
-.dalton-case .feedback-grid figcaption{font-size:12px;line-height:1.4;border-top:1px solid currentColor;padding-top:15px;opacity:.75}
-.dalton-case .small-note{font-size:13px;color:#666;margin-top:18px}
+.dalton-case .direction-gallery figcaption{padding:18px 15px;background:#fff}
+.dalton-case .direction-gallery figcaption strong{font-size:18px;display:block;margin-bottom:7px}
+.dalton-case .direction-gallery figcaption span{font-size:14px;font-weight:400;line-height:1.5;color:#444;display:block}
+.dalton-case .gallery-note{border-bottom:1px solid #c8c5bf;padding:0 0 65px;font-size:17px;line-height:1.6}
+.dalton-case .gallery-note strong{color:#151515}
+.dalton-case .section-heading{padding:70px 0 32px;display:flex;gap:45px;align-items:end;justify-content:space-between}
+.dalton-case .section-heading span,.dalton-case .outcome-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em}
+.dalton-case .section-heading h2{font-family:Arial,Helvetica,sans-serif;font-size:clamp(34px,4vw,56px);line-height:1.08;letter-spacing:-.04em;font-weight:700;margin:12px 0 0}
+.dalton-case .section-heading p{max-width:360px;font-size:16px;line-height:1.55;margin:0}
+.dalton-case .decision-list{display:grid;grid-template-columns:1fr 1fr;column-gap:60px;margin-bottom:65px;border-top:1px solid #a7a39c}
+.dalton-case .decision-list article{display:grid;grid-template-columns:30px 1fr;gap:16px;align-items:start;border-bottom:1px solid #c8c5bf;padding:27px 0 30px}
+.dalton-case .decision-list .decision-no{font-size:12px;font-weight:700;color:#777;padding-top:5px}
+.dalton-case .decision-list h3{font-size:20px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+.dalton-case .decision-list p{font-size:15px;line-height:1.6;color:#444;margin:0}
+.dalton-case .supporting-visuals{padding:10px 0 50px}
+.dalton-case .supporting-note{font-size:16px;line-height:1.6;max-width:850px;margin:0 0 70px}
+.dalton-case .outcome{border-top:1px solid #c8c5bf;padding:70px 0 110px}
+.dalton-case .outcome-head{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;margin-bottom:35px}
+.dalton-case .outcome h2{font-family:Arial,Helvetica,sans-serif;font-size:clamp(34px,3.6vw,52px);letter-spacing:-.04em;line-height:1.1;margin:15px 0}
+.dalton-case .outcome-head p{font-size:17px;line-height:1.6;margin:0}
+.dalton-case .feedback-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:24px}
+.dalton-case .feedback-grid figure{margin:0;padding:26px 0;min-width:0;border-top:2px solid #151515;border-bottom:1px solid #c8c5bf}
+.dalton-case .feedback-grid blockquote{font-family:Arial,Helvetica,sans-serif;font-size:clamp(19px,2vw,27px);font-weight:500;line-height:1.4;letter-spacing:-.025em;margin:0 0 30px}
+.dalton-case .feedback-grid figcaption{font-size:12px;color:#666}
+.dalton-case .small-note{font-size:12px;color:#666;margin-top:20px}
 @media(max-width:800px){
 .dalton-case .project-snapshot{grid-template-columns:repeat(2,minmax(0,1fr))}
-.dalton-case .visual-showcase{padding-top:35px;padding-bottom:50px}
-.dalton-case .case-copy{padding:56px 0}
-.dalton-case .brief-points,.dalton-case .direction-gallery,.dalton-case .decision-grid,.dalton-case .feedback-grid{grid-template-columns:1fr}
-.dalton-case .brief-points{padding-bottom:55px}
+.dalton-case .visual-showcase{padding:26px 0 45px}
+.dalton-case .case-copy{padding:52px 0;gap:25px}
+.dalton-case .brief-points,.dalton-case .direction-gallery,.dalton-case .decision-list,.dalton-case .feedback-grid{grid-template-columns:1fr}
+.dalton-case .brief-points{gap:18px;padding-bottom:45px}
 .dalton-case .direction-gallery{gap:18px}
-.dalton-case .gallery-note{padding-bottom:55px}
-.dalton-case .section-heading{display:block;padding-top:60px}
-.dalton-case .section-heading p{margin-top:20px}
-.dalton-case .decision-grid article{min-height:0;padding:24px}
-.dalton-case .supporting-visuals{padding-top:15px}
-.dalton-case .outcome{padding:58px 0 90px}
+.dalton-case .gallery-note{padding-bottom:50px}
+.dalton-case .section-heading{display:block;padding-top:55px}
+.dalton-case .section-heading p{margin-top:18px}
+.dalton-case .decision-list article{padding:23px 0}
+.dalton-case .supporting-visuals{padding-top:10px}
+.dalton-case .outcome{padding:55px 0 85px}
 .dalton-case .outcome-head{grid-template-columns:1fr;gap:20px}
-.dalton-case .feedback-grid figure{padding:25px}
 }
 </style>
 </head>
@@ -78,7 +78,7 @@
 <a class="back project-back" href="index.html#work">← Back to projects</a>
 <span>FEATURED MUNICIPAL CASE STUDY · 2026</span>
 <h1>Town of Dalton, Massachusetts</h1>
-<p>Three distinct design directions. One community-shaped solution. A municipal redesign built around resident needs, accessibility, and the town's own identity.</p>
+<p>For Dalton, I explored three different design approaches before developing the final website with the town. The focus was on easier access to services, stronger accessibility, and a design that suited Dalton.</p>
 <div class="project-links"><a class="url-link" href="https://jp0116stg.townweb.site/" target="_blank" rel="noopener noreferrer">Explore the staging website ↗</a></div>
 <dl class="project-snapshot">
 <div><dt>My role</dt><dd>Lead web &amp; UI/UX design</dd></div>
@@ -92,50 +92,50 @@
 <div class="mobile-shot"><span>MOBILE</span><img alt="Approved Town of Dalton mobile homepage design" src="assets/projects/web projects/Dalton/Dalton final mobile-compressed.jpg"/></div>
 </section>
 <section class="case-copy case-intro wrap">
-<div><span>01 / THE BRIEF</span><h2>Not just a new look. A better way to reach the town.</h2></div>
+<div><span>01 / THE BRIEF</span><h2>Starting with what Dalton needed.</h2></div>
 <div class="case-summary">
-<p>My work started in the client discovery meetings, before opening Figma. Dalton already knew which services and quick links mattered most, had a preferred palette, and wanted a site that felt unmistakably theirs.</p>
-<p>The brief also called for especially thoughtful accessibility, including keyboard-friendly navigation, clear information hierarchy, and interactions that wouldn't hide essential content behind hover effects. I studied the existing website and their reference sites, including Wellesley, to understand what to preserve and where to push further.</p>
+<p>I joined the project from the first client meetings. Dalton had already thought carefully about what should appear on the homepage, which links residents needed most, and the colors they wanted to use. I took those priorities into account before starting the designs.</p>
+<p>Accessibility was a major part of those conversations. They wanted keyboard navigation to work well and didn't want important information to appear only on hover. I also reviewed their existing site and the Wellesley website they shared as a reference.</p>
 </div>
 </section>
 <section class="brief-points wrap" aria-label="Project priorities">
-<article><b>Resident-first access</b><p>Bring frequently needed information and services into view quickly, without forcing visitors to hunt through the site.</p></article>
-<article><b>Accessible by design</b><p>Plan for clear contrast, readable content, keyboard interaction, and cues that don't depend on color alone.</p></article>
-<article><b>Distinctly Dalton</b><p>Respect the town's preferences while moving beyond a one-size-fits-all municipal template.</p></article>
+<article><b>Easy access to services</b><p>Make the links people use most easy to find without excessive scrolling.</p></article>
+<article><b>Accessibility from the start</b><p>Think about keyboard access, contrast, and clear labels during design—not just during testing.</p></article>
+<article><b>A design that fits the town</b><p>Use the town's priorities and visual preferences instead of applying a ready-made look.</p></article>
 </section>
 <section class="case-copy wrap">
-<div><span>02 / EXPLORATION</span><h2>Three ways to interpret the same brief.</h2></div>
-<p>I proposed three complete visual directions, each exploring a different personality while keeping Dalton's content and usability requirements intact. I designed both a homepage and a department page for each. The committee liked elements across the concepts, so I combined their preferred parts into one cohesive final direction—not a patchwork of three designs.</p>
+<div><span>02 / EXPLORATION</span><h2>Exploring three directions.</h2></div>
+<p>I suggested showing the client three different approaches rather than one initial design. Each included a homepage and a department page. They liked parts of all three, so I brought their preferred elements together and adjusted the details until the final design felt consistent.</p>
 </section>
 <section class="direction-gallery wrap" aria-label="Three initial website design directions">
-<figure><img loading="lazy" alt="Editorial design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton one-compressed.jpg"/><figcaption><strong>01 — Editorial</strong><span>Expressive typography, clear hierarchy, and varied section layouts.</span></figcaption></figure>
-<figure><img loading="lazy" alt="Geometric design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton two-compressed.jpg"/><figcaption><strong>02 — Geometric</strong><span>Bold structure, crisp edges, and a confident civic presence.</span></figcaption></figure>
-<figure><img loading="lazy" alt="Warm design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton three-compressed.jpg"/><figcaption><strong>03 — Warm</strong><span>Curved forms, softer details, and a more welcoming feel.</span></figcaption></figure>
+<figure><img loading="lazy" alt="Editorial design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton one-compressed.jpg"/><figcaption><strong>01 — Editorial</strong><span>A more editorial layout, with an emphasis on typography and hierarchy.</span></figcaption></figure>
+<figure><img loading="lazy" alt="Geometric design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton two-compressed.jpg"/><figcaption><strong>02 — Geometric</strong><span>Stronger geometric shapes, sharp edges, and a bolder layout.</span></figcaption></figure>
+<figure><img loading="lazy" alt="Warm design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton three-compressed.jpg"/><figcaption><strong>03 — Warm</strong><span>Softer curves, a wavy hero, and warmer colors from Dalton's palette.</span></figcaption></figure>
 </section>
-<p class="gallery-note wrap"><strong>The final direction:</strong> the town selected elements from multiple concepts. I refined their choices into a consistent visual system carried across the homepage, department pages, and responsive layouts. The approved result is shown at the top of this page.</p>
+<p class="gallery-note wrap"><strong>What they chose:</strong> elements from all three directions. I combined and refined them into the final design shown above, then carried the same style through the department and mobile pages.</p>
 <section class="wrap" aria-labelledby="decisions-heading">
-<div class="section-heading"><div><span>03 / UX DECISIONS</span><h2>Small decisions, big usability differences.</h2></div><p>These are the details I designed around the way people actually use a municipal website.</p></div>
-<div class="decision-grid">
-<article><small>01 / PRIORITIZATION</small><h3>Two levels of public notices</h3><p>Urgent safety alerts sit above routine town announcements, making the difference immediately visible.</p></article>
-<article><small>02 / FINDABILITY</small><h3>Less hero, more help</h3><p>A deliberately shallow hero brings popular quick links above the fold, while persistent search keeps answers within reach.</p></article>
-<article><small>03 / RECOGNITION</small><h3>Services people can spot</h3><p>Prominent icon links serve top resident tasks; a separate set of photographic cards makes other resources easy to recognize.</p></article>
-<article><small>04 / CLARITY</small><h3>Two calendars, two purposes</h3><p>Community events and board or committee meetings use distinctly different layouts, with committee filtering for targeted browsing.</p></article>
-<article><small>05 / ACCESSIBILITY</small><h3>Not color alone</h3><p>Calendar states include an explicit “Today” label, while clear link treatments, contrast, and keyboard-friendly behaviors support more users.</p></article>
-<article><small>06 / IMPLEMENTATION</small><h3>Beyond the Figma frame</h3><p>I carried the system into responsive and department-page designs, collaborated with developers, and reviewed staging against the approved vision.</p></article>
+<div class="section-heading"><div><span>03 / UX DECISIONS</span><h2>Why I designed it this way.</h2></div><p>A few choices from the homepage that are easy to miss when you're only looking at the finished design.</p></div>
+<div class="decision-list">
+<article><span class="decision-no">01</span><div><h3>Alerts have different priorities</h3><p>I used a red bar for urgent warnings, such as severe weather, and a separate green bar for less urgent town updates. The red bar only appears when needed.</p></div></article>
+<article><span class="decision-no">02</span><div><h3>Useful links are visible sooner</h3><p>The town wanted residents to see important services right away, so I kept the hero short and brought quick links above the fold. Search also stays in the header.</p></div></article>
+<article><span class="decision-no">03</span><div><h3>Different links, different treatments</h3><p>I kept the town's requested icons for the main quick links, with small visual refinements. Other services use photos, making them easier to recognize at a glance.</p></div></article>
+<article><span class="decision-no">04</span><div><h3>The calendars serve different needs</h3><p>Community events and board or committee meetings have separate visual treatments. I also added a committee filter to help visitors narrow down meetings.</p></div></article>
+<article><span class="decision-no">05</span><div><h3>Color isn't the only indicator</h3><p>For example, the calendar marks the current date with “Today” as well as a color. I also considered contrast, visible links, and keyboard use throughout the layouts.</p></div></article>
+<article><span class="decision-no">06</span><div><h3>The work continued after approval</h3><p>I carried the final direction into the department and responsive layouts, then collaborated with the developer and reviewed staging against the designs.</p></div></article>
 </div>
 </section>
 <section class="supporting-visuals wrap" aria-label="Department and responsive design">
 <div><span>DEPARTMENT PAGE · APPROVED</span><img loading="lazy" alt="Approved Town of Dalton department page design" src="assets/projects/web projects/Dalton/Dalton final department page-compressed.jpg"/></div>
 <div class="mobile-emphasis"><span>DEPARTMENT PAGE · MOBILE</span><img loading="lazy" alt="Approved mobile department page for the Town of Dalton" src="assets/projects/web projects/Dalton/Dalton department mobile final.jpg"/></div>
 </section>
-<p class="supporting-note wrap">The final system extends beyond the homepage: department templates, reusable components, responsive layouts, and developer handoff all needed to feel like parts of the same website.</p>
+<p class="supporting-note wrap">I designed the department pages and responsive versions using the same visual system, then worked with the developer to make sure the staging implementation followed the approved designs.</p>
 <section class="outcome wrap" aria-labelledby="outcome-heading">
-<div class="outcome-head"><div><span class="outcome-eyebrow">04 / OUTCOME</span><h2 id="outcome-heading">Approved by the people it was designed for.</h2></div><p>The town's committee formally approved the homepage and department-page designs. The client also highlighted both the direction of the work and the care taken to incorporate their priorities. The project moved forward into implementation.</p></div>
+<div class="outcome-head"><div><span class="outcome-eyebrow">04 / OUTCOME</span><h2 id="outcome-heading">What the client said.</h2></div><p>The committee approved both the homepage and department-page designs. Their feedback was especially meaningful because they had clear requirements from the start, and we had worked through several options together before settling on the final version.</p></div>
 <div class="feedback-grid">
 <figure><blockquote>“This is certainly moving toward being a site that clearly competes with and may possibly outperform the Wellesley site, which is very exciting.”</blockquote><figcaption>Dalton client feedback · Email</figcaption></figure>
 <figure><blockquote>“The committee is very pleased with the home page and department page designs and voted to approve them.”</blockquote><figcaption>Dalton committee decision · Email</figcaption></figure>
 </div>
-<p class="small-note">Feedback quoted from client correspondence. Staging is a work-in-progress implementation, not a claim of a completed live launch.</p>
+<p class="small-note">Client email excerpts. The linked site is the staging version.</p>
 </section>
 </main>
 <footer class="footer wrap"><span>Esraa Salah · Web &amp; UI/UX Designer</span><span>Cairo, Egypt · Remote</span></footer>
