@@ -1,3 +1,150 @@
 <!DOCTYPE html>
-
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Town of Amenia, New York | Esraa Salah</title><meta content="Portfolio of Esraa Salah, Web and UI/UX Designer" name="description"/><link href="site.css" rel="stylesheet"/></head><body class="project-page"><header class="nav wrap"><a class="wordmark" href="index.html">ESRAA SALAH</a><nav><a href="index.html">Home</a><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav></header><main><section class="project-hero wrap"><a class="back project-back" href="javascript:history.back()">← Back to projects</a><span>CUSTOM MUNICIPAL WEBSITE</span><h1>Town of Amenia, New York</h1><p>A resident-first municipal website that turns dense public information into clearer navigation, practical self-service and a distinct local identity.</p><div class="project-links"><a class="url-link" href="https://ameniany.gov/" rel="noopener" target="_blank">https://ameniany.gov/ ↗</a></div></section><section class="case-copy wrap"><div><span>THE STARTING POINT</span><h2>The real problem was not “make it modern.” It was helping residents find things faster.</h2></div><p>Amenia had the challenge common to municipal websites: many audiences, many departments and many completely different reasons for visiting. I went in planning around resident tasks rather than the town’s internal structure. Meetings, forms, permits, payments, news, events and other frequent needs needed to surface quickly, while deeper government content still had to remain organized and predictable. I also kept accessibility, responsive behavior and broad differences in digital confidence in mind, because a municipal site has to work for far more than one ideal user.</p></section><section class="visual-showcase wrap"><div class="desktop-shot"><span>DESKTOP</span><img alt="Town of Amenia, New York full desktop design" src="assets/projects/web projects/Amenia/Amenia Home page-compressed.jpg"/></div></section><section class="case-copy wrap"><div><span>THE APPROACH</span><h2>I used hierarchy and pathways to make a complicated website feel simple.</h2></div><p>I led the custom UX/UI from information hierarchy through responsive design. Search, quick actions and high-value resident paths were treated as part of the core experience rather than decorative homepage modules. Visually, I wanted Amenia to feel specific to the community, but I deliberately kept navigation conventions familiar so personality never came at the cost of findability. The result was a site where the visual identity and the practical structure support each other.</p></section><section class="case-image full light-image"><img alt="Amenia full case study" src="assets/projects/web projects/Amenia/Amenia Case Study1-compressed.jpg"/></section><section class="case-copy wrap"><div><span>THE RESULT</span><h2>It became more than a finished website. It became a reference direction.</h2></div><p>The finished site gave residents clearer routes into everyday town services while giving Amenia a much more intentional digital presence. Later municipal clients repeatedly referenced Amenia when explaining the kind of direction they wanted, which was a useful signal that the balance was working. The project sharpened one of my strongest principles in public-sector design: clarity itself can be the visual idea.</p></section></main><footer class="footer wrap"><span>Esraa Salah · Web &amp; UI/UX Designer</span><span>Egypt · Remote</span></footer><script src="site.js"></script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Amenia, New York municipal website redesign by Esraa Salah: before-and-after UX thinking, accessible resident pathways, and a live custom website."/>
+<title>Town of Amenia, New York | Esraa Salah</title>
+<link href="site.css" rel="stylesheet"/>
+<style>
+/* Custom Amenia case study. Styles are deliberately scoped to this page. */
+.amenia-case{background:#f2efe7;color:#111}
+.amenia-case .project-hero{padding:50px 0 50px}
+.amenia-case .project-hero>span,.amenia-case .eyebrow{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.amenia-case .project-hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:600;font-size:clamp(48px,7vw,108px);letter-spacing:-.055em;line-height:1.04;margin:30px 0 20px}
+.amenia-case .project-hero>p{font-size:clamp(18px,2.2vw,25px);line-height:1.45;max-width:880px}
+.amenia-case .project-stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:50px}
+.amenia-case .project-stats div{padding:20px 15px 22px 0}
+.amenia-case .project-stats b{font-size:11px;letter-spacing:.11em;text-transform:uppercase}
+.amenia-case .project-stats span{font-size:15px;line-height:1.4;color:#111;font-weight:600}
+.amenia-case .showcase{padding:30px 0 92px}
+.amenia-case .showcase-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:0 0 18px}
+.amenia-case .showcase-top span{font-size:11px;letter-spacing:.13em;font-weight:800}
+.amenia-case .showcase-top a{font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.amenia-case .showcase-frame{background:#fff;padding:20px 22px 0;border:1px solid #ddd9d0;max-height:920px;overflow:hidden;position:relative}
+.amenia-case .showcase-frame img{width:100%;height:auto;display:block}
+.amenia-case .showcase-frame:after{content:"";position:absolute;bottom:0;left:0;right:0;height:115px;background:linear-gradient(transparent,#fff);pointer-events:none}
+.amenia-case .section-intro{padding:0 0 40px;display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}
+.amenia-case .section-intro h2,.amenia-case .what-changed h2,.amenia-case .outcome h2{font:600 clamp(34px,4vw,58px)/1.08 'DM Sans',Arial,sans-serif;letter-spacing:-.04em;margin:14px 0 0}
+.amenia-case .section-intro p{font-size:18px;line-height:1.65;margin:0}
+.amenia-case .comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-bottom:105px}
+.amenia-case .comparison>article{padding:30px 32px 36px;min-height:360px;display:flex;flex-direction:column}
+.amenia-case .comparison .before{background:#e4e0d8;border:1px solid #d4cec4}
+.amenia-case .comparison .after{background:#1937ed;color:white}
+.amenia-case .comparison .comparison-label{font-size:11px;font-weight:800;letter-spacing:.16em}
+.amenia-case .comparison h3{font:600 clamp(28px,3vw,44px)/1.12 'DM Sans',Arial,sans-serif;letter-spacing:-.045em;margin:28px 0 22px}
+.amenia-case .comparison ul{list-style:none;margin:auto 0 0;padding:0}
+.amenia-case .comparison li{border-top:1px solid currentColor;padding:13px 0;font-size:16px;line-height:1.4}
+.amenia-case .comparison .before li{border-color:#b5b0a8}
+.amenia-case .comparison .after li{border-color:rgba(255,255,255,.4)}
+.amenia-case .what-changed{padding:0 0 100px}
+.amenia-case .what-changed .head{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:35px}
+.amenia-case .what-changed .head p{font-size:16px;line-height:1.6;max-width:480px;margin:0}
+.amenia-case .ux-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.amenia-case .ux-grid article{background:#fff;border:1px solid #e0ddd5;padding:30px;min-height:235px}
+.amenia-case .ux-grid .icon-box{width:47px;height:47px;display:grid;place-items:center;background:#e9edff;border-radius:12px;color:#1838ff;margin-bottom:20px}
+.amenia-case .ux-grid svg{width:25px;height:25px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.amenia-case .ux-grid h3{font-size:22px;letter-spacing:-.025em;line-height:1.2;margin:0 0 9px}
+.amenia-case .ux-grid p{font-size:16px;line-height:1.6;color:#4e4e4e;max-width:530px;margin:0}
+.amenia-case .case-study-more{padding:0 0 102px}
+.amenia-case .case-study-more .head{display:flex;gap:30px;justify-content:space-between;align-items:flex-end;margin-bottom:22px}
+.amenia-case .case-study-more h2{font:600 clamp(30px,3.2vw,48px)/1.1 'DM Sans',Arial,sans-serif;letter-spacing:-.04em;margin:12px 0 0}
+.amenia-case .case-study-more a{font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.amenia-case .case-study-more img{width:100%;height:auto;display:block;background:#fff}
+.amenia-case .outcome{background:#1838ff;color:#fff;padding:95px max(32px,calc((100vw - 1380px)/2)) 100px}
+.amenia-case .outcome-inner{display:grid;grid-template-columns:.55fr 1.45fr;gap:70px}
+.amenia-case .outcome h2{font-family:Georgia,'Times New Roman',serif;font-weight:600;font-size:clamp(48px,5.7vw,84px);line-height:1.02;letter-spacing:-.05em;margin:0 0 25px}
+.amenia-case .outcome p{font-size:19px;line-height:1.6;max-width:760px;margin:0 0 35px}
+.amenia-case .outcome a{display:inline-flex;gap:12px;border-bottom:2px solid currentColor;font-size:17px;font-weight:700;text-decoration:none;padding-bottom:9px}
+.amenia-case .footer{margin-top:0}
+@media(max-width:800px){
+.amenia-case .project-hero{padding:40px 0 36px}
+.amenia-case .project-hero h1{font-size:clamp(41px,10vw,66px)}
+.amenia-case .project-stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:35px}
+.amenia-case .showcase{padding:25px 0 65px}
+.amenia-case .showcase-frame{padding:9px 9px 0;max-height:680px}
+.amenia-case .section-intro,.amenia-case .comparison,.amenia-case .what-changed .head,.amenia-case .ux-grid,.amenia-case .outcome-inner{grid-template-columns:1fr;gap:25px}
+.amenia-case .comparison{padding-bottom:72px}
+.amenia-case .comparison>article{min-height:0;padding:26px}
+.amenia-case .what-changed{padding-bottom:75px}
+.amenia-case .ux-grid{gap:14px}
+.amenia-case .ux-grid article{min-height:0;padding:25px}
+.amenia-case .case-study-more{padding-bottom:70px}
+.amenia-case .case-study-more .head{display:block}
+.amenia-case .case-study-more a{display:inline-block;margin-top:18px}
+.amenia-case .outcome{padding:70px 32px 80px}
+.amenia-case .outcome h2{font-size:clamp(43px,10vw,66px)}
+}
+</style>
+</head>
+<body class="project-page amenia-case">
+<header class="nav wrap"><a class="wordmark" href="index.html">ESRAA SALAH</a><nav><a href="index.html">Home</a><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav></header>
+<main>
+<section class="project-hero wrap">
+<a class="back project-back" href="index.html#work">← Back to projects</a>
+<span>CUSTOM MUNICIPAL WEBSITE · LIVE PROJECT</span>
+<h1>Town of Amenia, New York</h1>
+<p>I redesigned Amenia’s municipal website to make everyday services easier to find, give the content some breathing room, and create a design that felt more like the town.</p>
+<div class="project-links"><a class="url-link" href="https://ameniany.gov/" rel="noopener noreferrer" target="_blank">Visit the live website ↗</a></div>
+<div class="project-stats">
+<div><b>Role</b><span>Sole UI/UX &amp; web designer</span></div>
+<div><b>Type</b><span>Custom municipal redesign</span></div>
+<div><b>Scope</b><span>Discovery, UX/UI, responsive design &amp; implementation support</span></div>
+<div><b>Status</b><span>Launched website</span></div>
+</div>
+</section>
+<section class="showcase wrap" aria-label="Finished Amenia homepage">
+<div class="showcase-top"><span>THE REDESIGN · DESKTOP</span><a href="https://ameniany.gov/" target="_blank" rel="noopener noreferrer">See it live ↗</a></div>
+<div class="showcase-frame"><img src="assets/projects/web projects/Amenia/Amenia Home page-compressed.jpg" alt="The redesigned Town of Amenia website homepage" fetchpriority="high"/></div>
+</section>
+<section class="section-intro wrap">
+<div><span class="eyebrow">01 / THE CHALLENGE</span><h2>Too much information. Not enough direction.</h2></div>
+<p>The old homepage had plenty of useful information, but it asked visitors to sift through long news lists, event details, separate link groups, and a crowded calendar. When I started the redesign, I focused on making common tasks easier to spot without losing the government information people still needed.</p>
+</section>
+<section class="comparison wrap" aria-label="Before and after user experience">
+<article class="before">
+<span class="comparison-label">BEFORE · THE OLD WEBSITE</span>
+<h3>A lot to read before you knew where to go.</h3>
+<ul>
+<li>Long, dense lists of town news and updates</li>
+<li>Several competing sections with little separation</li>
+<li>Small calendar and event details that were difficult to scan</li>
+<li>Important actions mixed in with secondary content</li>
+</ul>
+</article>
+<article class="after">
+<span class="comparison-label">AFTER · THE REDESIGN</span>
+<h3>Clearer paths to the things residents came for.</h3>
+<ul>
+<li>More obvious access to common services and information</li>
+<li>Stronger hierarchy across homepage sections</li>
+<li>Cleaner presentation of news, meetings, and events</li>
+<li>Responsive layouts and familiar navigation patterns</li>
+</ul>
+</article>
+</section>
+<section class="what-changed wrap">
+<div class="head"><div><span class="eyebrow">02 / MY APPROACH</span><h2>What I changed—and why.</h2></div><p>Instead of redesigning around the town's internal structure, I looked at what residents are most likely to come to the website to do.</p></div>
+<div class="ux-grid">
+<article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18M3 12h12M3 19h18"/><path d="m17 9 4 3-4 3"/></svg></span><h3>Common tasks up front</h3><p>Agendas, minutes, forms, permits, and payments shouldn't require a long search through department pages. I gave these routes much more prominence.</p></article>
+<article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12M12 13h6M12 17h4"/></svg></span><h3>Better content hierarchy</h3><p>The old homepage gave many sections similar weight. I reorganized the layout so important information could stand out and supporting content was easier to scan.</p></article>
+<article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/><path d="M8 10.5h5"/></svg></span><h3>Findability without guesswork</h3><p>I kept navigation recognizable, with search and clearer routes into town information. The design needed to work for residents with very different levels of digital confidence.</p></article>
+<article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="14" height="13" rx="2"/><rect x="17" y="9" width="5" height="12" rx="1"/><path d="M7 20h6m-3-4v4"/></svg></span><h3>Designed beyond desktop</h3><p>I carried the custom direction through responsive layouts, accessibility considerations, and developer collaboration so the finished website worked beyond the original design file.</p></article>
+</div>
+</section>
+<section class="case-study-more wrap" aria-label="Amenia case study visual">
+<div class="head"><div><span class="eyebrow">03 / DESIGN DETAILS</span><h2>A closer look at the work.</h2></div><a href="https://www.figma.com/proto/ngR6RINhEHrW0aiCpzoV73/Amenia-case-study?node-id=1-4&amp;viewport=560%2C249%2C0.1&amp;t=sTZWHWZeWYKWSG4P-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" rel="noopener noreferrer" target="_blank">Explore the Figma case study ↗</a></div>
+<img loading="lazy" src="assets/projects/web projects/Amenia/Amenia Case Study1-compressed.jpg" alt="Amenia website design case study and supporting design visuals"/>
+</section>
+<section class="outcome">
+<div class="outcome-inner">
+<div><span class="eyebrow">04 / THE RESULT</span></div>
+<div><h2>A website other towns pointed to.</h2>
+<p>Amenia launched with a clearer, more intentional design. What stood out to me afterward was hearing later municipal clients reference Amenia when explaining the kind of website they wanted for their own communities.</p>
+<a href="https://ameniany.gov/" target="_blank" rel="noopener noreferrer">Explore the live website ↗</a>
+</div></div>
+</section>
+</main>
+<footer class="footer wrap"><span>Esraa Salah · Web &amp; UI/UX Designer</span><span>Egypt · Remote</span></footer>
+<script src="site.js"></script>
+</body></html>
