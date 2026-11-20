@@ -24,11 +24,12 @@
 .dalton-case .case-summary{display:grid;gap:14px}
 .dalton-case .case-summary p{margin:0}
 .dalton-case .brief-points{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;border-bottom:1px solid #c8c5bf;padding:0 0 58px}
-.dalton-case .brief-points article{border-top:1px solid #8e8a83;padding-top:15px}
+.dalton-case .brief-points article{padding-top:15px}
 .dalton-case .brief-points b{display:block;font-size:17px;margin-bottom:7px}
 .dalton-case .brief-points p{font-size:15px;line-height:1.6;color:#4a4a4a;margin:0}
 .dalton-case .direction-gallery{padding:15px 0 35px}
-.dalton-case .direction-gallery figure{min-width:0}
+.dalton-case .direction-gallery figure{min-width:0;position:relative}
+.dalton-case .direction-gallery .direction-number{position:absolute;top:14px;left:14px;z-index:1;width:44px;height:44px;display:grid;place-items:center;background:#fff;color:#151515;border:1px solid #d7d3cc;font:700 20px/1 'DM Sans',Arial,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.08)}
 .dalton-case .direction-gallery figcaption{padding:18px 15px;background:#fff}
 .dalton-case .direction-gallery figcaption strong{font-size:18px;display:block;margin-bottom:7px}
 .dalton-case .direction-gallery figcaption span{font-size:14px;font-weight:400;line-height:1.5;color:#444;display:block}
@@ -79,18 +80,18 @@
 }
 @media(max-width:520px){.dalton-case .decision-list{grid-template-columns:1fr}.dalton-case .decision-list article{padding:24px}}
 @media(prefers-reduced-motion:reduce){.dalton-case .decision-list article{transition:none}.dalton-case .decision-list article:hover{transform:none}}
-.dalton-case .visual-showcase img,.dalton-case .supporting-visuals img{width:100%;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:top}
-.dalton-case .mobile-shot{position:static;text-align:center}
-.dalton-case .mobile-shot>span{text-align:left}
-.dalton-case .mobile-shot img{display:block;width:auto!important;max-width:100%!important;height:auto!important;max-height:680px!important;object-fit:contain!important;margin:0 auto}
-.dalton-case .supporting-visuals .mobile-emphasis{text-align:center}
-.dalton-case .supporting-visuals .mobile-emphasis>span{text-align:left}
-.dalton-case .supporting-visuals .mobile-emphasis img{display:block;width:min(100%,165px)!important;height:auto!important;max-height:none!important;margin:0 auto}
+.dalton-case .visual-showcase img,.dalton-case .supporting-visuals img{display:block;width:100%;height:auto;object-fit:contain;object-position:top}
+.dalton-case .visual-showcase .mobile-shot,.dalton-case .supporting-visuals .mobile-emphasis{position:static;text-align:center;align-self:start;min-width:0}
+.dalton-case .visual-showcase .mobile-shot>span,.dalton-case .supporting-visuals .mobile-emphasis>span{display:block;text-align:left}
+.dalton-case .visual-showcase .mobile-shot img,.dalton-case .supporting-visuals .mobile-emphasis img{display:block;height:var(--desktop-paired-height,auto)!important;width:auto!important;max-width:100%!important;max-height:none!important;object-fit:contain!important;margin:0 auto}
+.dalton-case .supporting-visuals{align-items:start;padding-bottom:42px}
 .dalton-case .visual-showcase .desktop-shot,.dalton-case .visual-showcase .mobile-shot,.dalton-case .supporting-visuals>div{overflow:visible}
-.dalton-case .supporting-visuals{align-items:start;padding-bottom:65px}
-.dalton-case .supporting-visuals .mobile-emphasis{position:sticky;top:26px;align-self:start}
-.dalton-case .supporting-visuals .mobile-emphasis .supporting-note{display:block;text-align:left;max-width:310px;margin:24px auto 0;font-size:15px;line-height:1.55;color:#444}
-@media(max-width:800px){.dalton-case .supporting-visuals .mobile-emphasis{position:static}.dalton-case .supporting-visuals .mobile-emphasis .supporting-note{max-width:500px}}
+.dalton-case .supporting-note{max-width:850px;margin:0 auto 65px;font-size:16px;line-height:1.6;color:#444}
+@media(max-width:800px){
+.dalton-case .visual-showcase .mobile-shot img,.dalton-case .supporting-visuals .mobile-emphasis img{height:auto!important;width:min(60%,280px)!important;max-width:100%!important}
+.dalton-case .supporting-visuals{padding-bottom:36px}
+.dalton-case .supporting-note{margin-bottom:50px}
+}
 .dalton-case .accessibility-result{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #e3e3e3;margin-top:20px;padding-top:16px;flex-wrap:wrap}
 .dalton-case .accessibility-result>span{font-size:13px;font-weight:700;color:#333}
 .dalton-case .accessibility-result strong{display:inline-flex;align-items:center;gap:5px;background:#087b24;color:#fff;border-radius:999px;padding:7px 12px;font-size:14px;line-height:1}
@@ -135,9 +136,9 @@
 <p>I suggested showing the client three different approaches rather than one initial design. Each included a homepage and a department page. They liked parts of all three, so I brought their preferred elements together and adjusted the details until the final design felt consistent.</p>
 </section>
 <section class="direction-gallery wrap" aria-label="Three initial website design directions">
-<figure><img loading="lazy" alt="Editorial design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton one-compressed.jpg"/><figcaption><strong>01 — Editorial</strong><span>A more editorial layout, with an emphasis on typography and hierarchy.</span></figcaption></figure>
-<figure><img loading="lazy" alt="Geometric design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton two-compressed.jpg"/><figcaption><strong>02 — Geometric</strong><span>Stronger geometric shapes, sharp edges, and a bolder layout.</span></figcaption></figure>
-<figure><img loading="lazy" alt="Warm design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton three-compressed.jpg"/><figcaption><strong>03 — Warm</strong><span>Softer curves, a wavy hero, and warmer colors from Dalton's palette.</span></figcaption></figure>
+<figure><span class="direction-number" aria-label="Direction 1">1</span><img loading="lazy" alt="Editorial design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton one-compressed.jpg"/><figcaption><strong>01 — Editorial</strong><span>A more editorial layout, with an emphasis on typography and hierarchy.</span></figcaption></figure>
+<figure><span class="direction-number" aria-label="Direction 2">2</span><img loading="lazy" alt="Geometric design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton two-compressed.jpg"/><figcaption><strong>02 — Geometric</strong><span>Stronger geometric shapes, sharp edges, and a bolder layout.</span></figcaption></figure>
+<figure><span class="direction-number" aria-label="Direction 3">3</span><img loading="lazy" alt="Warm design direction for the Dalton municipal homepage" src="assets/projects/web projects/Dalton/Dalton three-compressed.jpg"/><figcaption><strong>03 — Warm</strong><span>Softer curves, a wavy hero, and warmer colors from Dalton's palette.</span></figcaption></figure>
 </section>
 <p class="gallery-note wrap"><strong>What they chose:</strong> elements from all three directions. I combined and refined them into the final design shown above, then carried the same style through the department and mobile pages.</p>
 <section class="wrap" aria-labelledby="decisions-heading">
@@ -153,8 +154,9 @@
 </section>
 <section class="supporting-visuals wrap" aria-label="Department and responsive design">
 <div><span>DEPARTMENT PAGE · APPROVED</span><img loading="lazy" alt="Approved Town of Dalton department page design" src="assets/projects/web projects/Dalton/Dalton final department page-compressed.jpg"/></div>
-<div class="mobile-emphasis"><span>DEPARTMENT PAGE · MOBILE</span><img loading="lazy" alt="Approved mobile department page for the Town of Dalton" src="assets/projects/web projects/Dalton/Dalton department mobile final.jpg"/><p class="supporting-note">I designed the department pages and responsive versions using the same visual system, then worked with the developer to make sure the staging implementation followed the approved designs.</p></div>
+<div class="mobile-emphasis"><span>DEPARTMENT PAGE · MOBILE</span><img loading="lazy" alt="Approved mobile department page for the Town of Dalton" src="assets/projects/web projects/Dalton/Dalton department mobile final.jpg"/></div>
 </section>
+<p class="supporting-note wrap">I designed the department pages and responsive versions using the same visual system, then worked with the developer to make sure the staging implementation followed the approved designs.</p>
 <section class="outcome wrap" aria-labelledby="outcome-heading">
 <div class="outcome-head"><div><span class="outcome-eyebrow">04 / OUTCOME</span><h2 id="outcome-heading">What the client said.</h2></div><p>The committee approved both the homepage and department-page designs. Their feedback was especially meaningful because they had clear requirements from the start, and we had worked through several options together before settling on the final version.</p></div>
 <div class="feedback-grid">
@@ -166,5 +168,34 @@
 </main>
 <footer class="footer wrap"><span>Esraa Salah · Web &amp; UI/UX Designer</span><span>Egypt · Remote</span></footer>
 <script src="site.js"></script>
+<script>
+(() => {
+  const pairs = [
+    ['.visual-showcase .desktop-shot img', '.visual-showcase .mobile-shot'],
+    ['.supporting-visuals > div:first-child img', '.supporting-visuals .mobile-emphasis']
+  ];
+  const sync = () => {
+    for (const [desktopSelector, mobileSelector] of pairs) {
+      const desktop = document.querySelector(desktopSelector);
+      const mobile = document.querySelector(mobileSelector);
+      if (!desktop || !mobile) continue;
+      if (window.matchMedia('(max-width:800px)').matches) {
+        mobile.style.removeProperty('--desktop-paired-height');
+      } else if (desktop.complete && desktop.naturalWidth && desktop.getBoundingClientRect().height) {
+        mobile.style.setProperty('--desktop-paired-height', Math.round(desktop.getBoundingClientRect().height) + 'px');
+      }
+    }
+  };
+  for (const [selector] of pairs) {
+    const img = document.querySelector(selector);
+    if (img) {
+      img.addEventListener('load', sync);
+      new ResizeObserver(sync).observe(img);
+    }
+  }
+  window.addEventListener('resize', sync, { passive:true });
+  sync();
+})();
+</script>
 </body>
 </html>
