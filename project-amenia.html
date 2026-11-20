@@ -27,16 +27,21 @@
 .amenia-case .section-intro{padding:0 0 40px;display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}
 .amenia-case .section-intro h2,.amenia-case .what-changed h2,.amenia-case .outcome h2{font:600 clamp(34px,4vw,58px)/1.08 'DM Sans',Arial,sans-serif;letter-spacing:-.04em;margin:14px 0 0}
 .amenia-case .section-intro p{font-size:18px;line-height:1.65;margin:0}
-.amenia-case .comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-bottom:105px}
-.amenia-case .comparison>article{padding:30px 32px 36px;min-height:360px;display:flex;flex-direction:column}
-.amenia-case .comparison .before{background:#e4e0d8;border:1px solid #d4cec4}
-.amenia-case .comparison .after{background:#1937ed;color:white}
-.amenia-case .comparison .comparison-label{font-size:11px;font-weight:800;letter-spacing:.16em}
-.amenia-case .comparison h3{font:600 clamp(28px,3vw,44px)/1.12 'DM Sans',Arial,sans-serif;letter-spacing:-.045em;margin:28px 0 22px}
-.amenia-case .comparison ul{list-style:none;margin:auto 0 0;padding:0}
-.amenia-case .comparison li{border-top:1px solid currentColor;padding:13px 0;font-size:16px;line-height:1.4}
-.amenia-case .comparison .before li{border-color:#b5b0a8}
-.amenia-case .comparison .after li{border-color:rgba(255,255,255,.4)}
+.amenia-case .before-after{padding-bottom:95px}
+.amenia-case .comparison-heading{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:22px}
+.amenia-case .comparison-heading h3{font-family:'DM Sans',Arial,sans-serif;font-size:clamp(26px,3.2vw,42px);letter-spacing:-.04em;line-height:1.12;margin:10px 0 0}
+.amenia-case .comparison-heading p{max-width:360px;font-size:15px;line-height:1.55;margin:0}
+.amenia-case .comparison{display:grid;grid-template-columns:.46fr 1fr;gap:16px;align-items:stretch}
+.amenia-case .comparison figure{min-width:0;margin:0;padding:0;display:flex;flex-direction:column;background:#fff;border:1px solid #dedbd4}
+.amenia-case .comparison figcaption{font-size:12px;letter-spacing:.12em;font-weight:800;padding:20px 22px 15px}
+.amenia-case .comparison .compare-shot{height:480px;min-height:0;overflow:hidden;display:flex;justify-content:center;align-items:flex-start;padding:0 18px;background:#f5f3ef}
+.amenia-case .comparison figure:first-child .compare-shot{background:#e6e9e8}
+.amenia-case .comparison .compare-shot img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;object-position:top}
+.amenia-case .comparison figure:first-child .compare-shot img{width:200px;image-rendering:auto}
+.amenia-case .comparison figure:nth-child(2) .compare-shot img{width:100%}
+.amenia-case .comparison .compare-caption{font-size:15px;line-height:1.55;color:#484848;padding:18px 22px 23px;min-height:92px}
+.amenia-case .comparison-notes{display:grid;grid-template-columns:1fr 1fr;gap:45px;border-bottom:1px solid #c8c5bf;padding:23px 0 0}
+.amenia-case .comparison-notes p{font-size:16px;line-height:1.6;margin:0;padding-bottom:24px}
 .amenia-case .what-changed{padding:0 0 100px}
 .amenia-case .what-changed .head{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:35px}
 .amenia-case .what-changed .head p{font-size:16px;line-height:1.6;max-width:480px;margin:0}
@@ -50,7 +55,10 @@
 .amenia-case .case-study-more .head{display:flex;gap:30px;justify-content:space-between;align-items:flex-end;margin-bottom:22px}
 .amenia-case .case-study-more h2{font:600 clamp(30px,3.2vw,48px)/1.1 'DM Sans',Arial,sans-serif;letter-spacing:-.04em;margin:12px 0 0}
 .amenia-case .case-study-more a{font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
-.amenia-case .case-study-more img{width:100%;height:auto;display:block;background:#fff}
+.amenia-case .case-study-more .case-study-preview{height:570px;overflow:hidden;background:#fff;border:1px solid #dedbd4;display:block;position:relative}
+.amenia-case .case-study-more .case-study-preview img{width:100%;height:auto;display:block;object-position:top}
+.amenia-case .case-study-more .case-study-preview:after{content:"";position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(transparent,#fff);pointer-events:none}
+.amenia-case .case-study-more .preview-caption{display:flex;justify-content:space-between;gap:22px;align-items:center;margin-top:15px;color:#555;font-size:14px;line-height:1.5}
 .amenia-case .outcome{background:#1838ff;color:#fff;padding:95px max(32px,calc((100vw - 1380px)/2)) 100px}
 .amenia-case .outcome-inner{display:grid;grid-template-columns:.55fr 1.45fr;gap:70px}
 .amenia-case .outcome h2{font-family:Georgia,'Times New Roman',serif;font-weight:600;font-size:clamp(48px,5.7vw,84px);line-height:1.02;letter-spacing:-.05em;margin:0 0 25px}
@@ -63,13 +71,19 @@
 .amenia-case .project-stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:35px}
 .amenia-case .showcase{padding:25px 0 65px}
 .amenia-case .showcase-frame{padding:9px 9px 0;max-height:680px}
-.amenia-case .section-intro,.amenia-case .comparison,.amenia-case .what-changed .head,.amenia-case .ux-grid,.amenia-case .outcome-inner{grid-template-columns:1fr;gap:25px}
-.amenia-case .comparison{padding-bottom:72px}
-.amenia-case .comparison>article{min-height:0;padding:26px}
+.amenia-case .section-intro,.amenia-case .comparison,.amenia-case .comparison-notes,.amenia-case .what-changed .head,.amenia-case .ux-grid,.amenia-case .outcome-inner{grid-template-columns:1fr;gap:25px}
+.amenia-case .before-after{padding-bottom:65px}
+.amenia-case .comparison-heading{display:block}
+.amenia-case .comparison-heading p{margin-top:15px}
+.amenia-case .comparison .compare-shot{height:400px}
+.amenia-case .comparison-notes{gap:0}
+.amenia-case .comparison-notes p{padding-bottom:8px}
 .amenia-case .what-changed{padding-bottom:75px}
 .amenia-case .ux-grid{gap:14px}
 .amenia-case .ux-grid article{min-height:0;padding:25px}
 .amenia-case .case-study-more{padding-bottom:70px}
+.amenia-case .case-study-more .case-study-preview{height:400px}
+.amenia-case .case-study-more .preview-caption{display:block}
 .amenia-case .case-study-more .head{display:block}
 .amenia-case .case-study-more a{display:inline-block;margin-top:18px}
 .amenia-case .outcome{padding:70px 32px 80px}
@@ -99,29 +113,15 @@
 </section>
 <section class="section-intro wrap">
 <div><span class="eyebrow">01 / THE CHALLENGE</span><h2>Too much information. Not enough direction.</h2></div>
-<p>The old homepage had plenty of useful information, but it asked visitors to sift through long news lists, event details, separate link groups, and a crowded calendar. When I started the redesign, I focused on making common tasks easier to spot without losing the government information people still needed.</p>
+<p>The old homepage had useful information, but it was difficult to scan. News, events, service links and a tightly packed calendar all demanded attention at once. I wanted people to find what they needed faster without stripping away the information the town had to provide.</p>
 </section>
-<section class="comparison wrap" aria-label="Before and after user experience">
-<article class="before">
-<span class="comparison-label">BEFORE · THE OLD WEBSITE</span>
-<h3>A lot to read before you knew where to go.</h3>
-<ul>
-<li>Long, dense lists of town news and updates</li>
-<li>Several competing sections with little separation</li>
-<li>Small calendar and event details that were difficult to scan</li>
-<li>Important actions mixed in with secondary content</li>
-</ul>
-</article>
-<article class="after">
-<span class="comparison-label">AFTER · THE REDESIGN</span>
-<h3>Clearer paths to the things residents came for.</h3>
-<ul>
-<li>More obvious access to common services and information</li>
-<li>Stronger hierarchy across homepage sections</li>
-<li>Cleaner presentation of news, meetings, and events</li>
-<li>Responsive layouts and familiar navigation patterns</li>
-</ul>
-</article>
+<section class="before-after wrap" aria-label="Amenia website before and after">
+<div class="comparison-heading"><div><span class="eyebrow">THE REDESIGN / BEFORE &amp; AFTER</span><h3>Same town. A much clearer experience.</h3></div><p>The old website is shown from a 2024 screenshot. The redesigned site on the right is the live custom work I designed.</p></div>
+<div class="comparison">
+<figure><figcaption>BEFORE · 2024 WEBSITE</figcaption><div class="compare-shot"><img loading="lazy" alt="Screenshot of Amenia's old website with dense news lists, small text, and a compact calendar" src="assets/projects/web projects/Amenia/amenia-before-2024-preview.jpg"/></div><div class="compare-caption">A crowded homepage, with long news lists, separate service links and events competing for attention.</div></figure>
+<figure><figcaption>AFTER · CUSTOM REDESIGN</figcaption><div class="compare-shot"><img loading="lazy" alt="Top portion of Amenia's redesigned homepage showing search, clear quick links and contemporary visual hierarchy" src="assets/projects/web projects/Amenia/Amenia Home page-compressed.jpg"/></div><div class="compare-caption">Clearer entry points for the most common tasks, more breathing room and a stronger visual hierarchy.</div></figure>
+</div>
+<div class="comparison-notes"><p><strong>What needed attention:</strong> information was present, but visitors had to scan competing sections and long text lists to find it.</p><p><strong>What I changed:</strong> I reorganized the homepage around the tasks residents come for, while keeping deeper municipal content easy to reach.</p></div>
 </section>
 <section class="what-changed wrap">
 <div class="head"><div><span class="eyebrow">02 / MY APPROACH</span><h2>What I changed—and why.</h2></div><p>Instead of redesigning around the town's internal structure, I looked at what residents are most likely to come to the website to do.</p></div>
@@ -129,12 +129,13 @@
 <article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18M3 12h12M3 19h18"/><path d="m17 9 4 3-4 3"/></svg></span><h3>Common tasks up front</h3><p>Agendas, minutes, forms, permits, and payments shouldn't require a long search through department pages. I gave these routes much more prominence.</p></article>
 <article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12M12 13h6M12 17h4"/></svg></span><h3>Better content hierarchy</h3><p>The old homepage gave many sections similar weight. I reorganized the layout so important information could stand out and supporting content was easier to scan.</p></article>
 <article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/><path d="M8 10.5h5"/></svg></span><h3>Findability without guesswork</h3><p>I kept navigation recognizable, with search and clearer routes into town information. The design needed to work for residents with very different levels of digital confidence.</p></article>
-<article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="14" height="13" rx="2"/><rect x="17" y="9" width="5" height="12" rx="1"/><path d="M7 20h6m-3-4v4"/></svg></span><h3>Designed beyond desktop</h3><p>I carried the custom direction through responsive layouts, accessibility considerations, and developer collaboration so the finished website worked beyond the original design file.</p></article>
+<article><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="14" height="13" rx="2"/><rect x="17" y="9" width="5" height="12" rx="1"/><path d="M7 20h6m-3-4v4"/></svg></span><h3>Designed beyond desktop</h3><p>I worked on responsive layouts, clear links, readable content and accessibility, and stayed involved with developers as the designs became a working website.</p></article>
 </div>
 </section>
 <section class="case-study-more wrap" aria-label="Amenia case study visual">
-<div class="head"><div><span class="eyebrow">03 / DESIGN DETAILS</span><h2>A closer look at the work.</h2></div><a href="https://www.figma.com/proto/ngR6RINhEHrW0aiCpzoV73/Amenia-case-study?node-id=1-4&amp;viewport=560%2C249%2C0.1&amp;t=sTZWHWZeWYKWSG4P-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" rel="noopener noreferrer" target="_blank">Explore the Figma case study ↗</a></div>
-<img loading="lazy" src="assets/projects/web projects/Amenia/Amenia Case Study1-compressed.jpg" alt="Amenia website design case study and supporting design visuals"/>
+<div class="head"><div><span class="eyebrow">03 / DESIGN DETAILS</span><h2>From planning to the finished site.</h2></div><a href="https://www.figma.com/proto/ngR6RINhEHrW0aiCpzoV73/Amenia-case-study?node-id=1-4&amp;viewport=560%2C249%2C0.1&amp;t=sTZWHWZeWYKWSG4P-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" rel="noopener noreferrer" target="_blank">View the full Figma case study ↗</a></div>
+<a class="case-study-preview" href="https://www.figma.com/proto/ngR6RINhEHrW0aiCpzoV73/Amenia-case-study?node-id=1-4&amp;viewport=560%2C249%2C0.1&amp;t=sTZWHWZeWYKWSG4P-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" rel="noopener noreferrer" target="_blank" aria-label="Open the complete Amenia Figma case study"><img loading="lazy" src="assets/projects/web projects/Amenia/Amenia Case Study1-compressed.jpg" alt="A preview of the Amenia case-study presentation showing design work and process"/></a>
+<div class="preview-caption"><span>The original case-study visual is preserved here as a preview, rather than stretched into a very tall page section.</span><a href="https://www.figma.com/proto/ngR6RINhEHrW0aiCpzoV73/Amenia-case-study?node-id=1-4&amp;viewport=560%2C249%2C0.1&amp;t=sTZWHWZeWYKWSG4P-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" rel="noopener noreferrer" target="_blank">See the full presentation ↗</a></div>
 </section>
 <section class="outcome">
 <div class="outcome-inner">
