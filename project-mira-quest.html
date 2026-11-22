@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MIRA Quest — Interactive NASA Education Game | Esraa Salah</title>
+<meta name="description" content="MIRA Quest: a story-driven educational game designed and built for the 2026 NASA Space Apps Challenge. Explore Opportunity and Apollo 11's Eagle through scientific discovery and interactive storytelling."/>
+<link rel="stylesheet" href="site.css"/>
+<style>
+.mira-case{background:#f2efe7;color:#171b2b}
+.mira-case .project-hero{padding:38px 0 60px}
+.mira-case .project-hero>span,.mira-case .eyebrow{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.mira-case .project-hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(60px,10vw,140px);line-height:.95;letter-spacing:-.065em;margin:28px 0 20px}
+.mira-case .project-hero>p{font-size:clamp(19px,2.2vw,27px);line-height:1.5;max-width:950px}
+.mira-case .project-links{display:flex;flex-wrap:wrap;gap:24px}
+.mira-case .project-links a{color:#1838ff!important}
+.mira-case .mira-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;border-top:1px solid #c7c7c3;border-bottom:1px solid #c7c7c3;padding:21px 0;margin:42px 0 0}
+.mira-case .mira-meta dt{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#656b76;margin-bottom:8px}
+.mira-case .mira-meta dd{font-size:15px;line-height:1.5;font-weight:600;margin:0}
+.mira-case .mira-feature{background:#0c1930;color:#fff;padding:60px 0 82px}
+.mira-case .mira-feature .eyebrow{color:#d6d4c7;margin-bottom:18px}
+.mira-case .mira-feature img{display:block;width:100%;max-width:1080px;margin:auto;border:1px solid rgba(255,255,255,.2)}
+.mira-case .mira-feature p{max-width:800px;font-size:16px;line-height:1.6;color:#d8dfed;margin:23px auto 0;text-align:center}
+.mira-case .mira-section{padding:85px 0;border-bottom:1px solid #cfcac2;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:65px}
+.mira-case .mira-section h2{font-size:clamp(34px,4.3vw,60px);line-height:1.08;letter-spacing:-.045em;margin:15px 0;font-family:'DM Sans',Arial,sans-serif}
+.mira-case .mira-section p{font-size:18px;line-height:1.7;margin:0 0 15px;color:#434953}
+.mira-case .mira-section strong{color:#171b2b}
+.mira-case .mira-steps{padding:90px 0}
+.mira-case .mira-steps h2{font-size:clamp(38px,5vw,65px);letter-spacing:-.05em;margin:15px 0 36px}
+.mira-case .mira-step{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center;margin-bottom:70px}
+.mira-case .mira-step:nth-of-type(even) .mira-shot{order:2}
+.mira-case .mira-shot{background:#0c1930;padding:16px;min-width:0}
+.mira-case .mira-shot img{display:block;width:100%;height:auto}
+.mira-case .mira-step h3{font-size:clamp(26px,3.2vw,43px);letter-spacing:-.04em;margin:12px 0}
+.mira-case .mira-step p{font-size:17px;line-height:1.7;color:#4c525a;max-width:550px}
+.mira-case .mira-step .eyebrow{color:#596374}
+.mira-case .mira-tech{background:#e5e9ef;padding:90px 0}
+.mira-case .mira-tech .mira-section{padding:0;border:0}
+.mira-case .mira-closing{background:#0c1930;color:#fff;padding:90px max(32px,calc((100% - 1380px)/2))}
+.mira-case .mira-closing h2{font-size:clamp(42px,6vw,82px);letter-spacing:-.055em;line-height:1.04;max-width:950px;margin:18px 0}
+.mira-case .mira-closing p{font-size:19px;line-height:1.6;max-width:760px;color:#d6dce7}
+.mira-case .mira-closing a{display:inline-block;color:#fff;font-weight:700;border-bottom:2px solid #fff;text-decoration:none;padding-bottom:8px;margin:12px 25px 0 0}
+.mira-case .footer{margin-top:0}
+@media(max-width:800px){.mira-case .mira-meta{grid-template-columns:1fr 1fr}.mira-case .mira-section,.mira-case .mira-step{grid-template-columns:1fr;gap:22px}.mira-case .mira-step:nth-of-type(even) .mira-shot{order:0}.mira-case .mira-step{margin-bottom:50px}.mira-case .mira-section,.mira-case .mira-steps,.mira-case .mira-tech{padding:60px 0}.mira-case .mira-feature{padding:35px 0 55px}.mira-case .mira-shot{padding:8px}.mira-case .mira-closing{padding:65px 20px}}
+@media(max-width:480px){.mira-case .mira-meta{grid-template-columns:1fr}.mira-case .project-hero h1{font-size:19vw}}
+</style>
+</head>
+<body class="project-page mira-case">
+<header class="nav wrap"><a class="wordmark" href="index.html">ESRAA SALAH</a><nav><a href="index.html">Home</a><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav></header>
+<main>
+<section class="project-hero wrap">
+<a class="back project-back" href="ai-built.html">← Back to projects</a>
+<span>NASA SPACE APPS CHALLENGE · 2026 · INTERACTIVE EDUCATION</span>
+<h1>MIRA Quest</h1>
+<p>An interactive educational game that turns NASA's left-behind machines into stories players can explore, investigate, and remember.</p>
+<div class="project-links"><a class="url-link" href="https://mira-quest.vercel.app/svg" target="_blank" rel="noopener noreferrer">Play MIRA Quest ↗</a><a class="url-link" href="https://www.youtube.com/watch?v=3M7_jcyoQ48svg" target="_blank" rel="noopener noreferrer">Watch demonstration ↗</a><a class="url-link" href="https://github.com/esraaki/mira_quest" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
+<dl class="mira-meta"><div><dt>Context</dt><dd>2026 NASA Space Apps hackathon</dd></div><div><dt>Audience</dt><dd>School-age learners &amp; curious explorers of all ages</dd></div><div><dt>My work</dt><dd>Concept, UX/UI, storytelling &amp; web-game development</dd></div><div><dt>Platform</dt><dd>Responsive browser game</dd></div></dl>
+</section>
+<section class="mira-feature"><div class="wrap"><span class="eyebrow">THE EXPERIENCE · FOLLOW THE SIGNAL</span><img src="https://assets.spaceappschallenge.org/media/images/01__The_two_signals___mission_selection-compr_JRWcnpg.width-1024.png" alt="MIRA Quest mission selection screen with two mysterious signals leading toward the Moon and Mars" fetchpriority="high"/><p>Two signals. Two destinations. Players choose where to go, then discover the real science and history behind the machines they find.</p></div></section>
+<section class="mira-section wrap"><div><span class="eyebrow">01 / THE BACKGROUND</span><h2>A hackathon challenge about forgotten space hardware.</h2></div><div><p>I created MIRA Quest for the <strong>2026 NASA Space Apps Challenge</strong>, responding to “Abandoned but not Forgotten,” a prompt to bring NASA equipment left behind on the Moon and Mars into an engaging educational experience.</p><p>Instead of presenting another timeline or information page, I wanted to explore how a player could discover the purpose, science, and legacy of a mission by interacting with its machine.</p></div></section>
+<section class="mira-section wrap"><div><span class="eyebrow">02 / THE PROBLEM</span><h2>The science is fascinating. The way we encounter it can feel distant.</h2></div><div><p>NASA's mission archives contain remarkable discoveries, photographs, and engineering stories, but for younger or casual audiences these can be scattered across technical articles, timelines, and databases. Knowing that a rover stopped transmitting is not the same as understanding what it achieved or why its story matters.</p><p>The design challenge was to make real space history <strong>approachable without oversimplifying the science</strong>—and make learning feel like an adventure, not homework.</p></div></section>
+<section class="mira-section wrap"><div><span class="eyebrow">03 / TARGET AUDIENCE</span><h2>Designed for curious minds, not just space experts.</h2></div><div><p>The primary audience is <strong>school-age space enthusiasts</strong>: learners who enjoy exploration, mysteries, games, and discovery. The experience also welcomes casual visitors of any age who may know the Moon landing or Mars rovers by name, but not the details behind them.</p><p>Short, approachable dialogue, visual investigation, clear choices, and collectible imagery offer different ways to engage with the material.</p></div></section>
+<section class="mira-section wrap"><div><span class="eyebrow">04 / THE SOLUTION</span><h2>Let players uncover the mission, not just read about it.</h2></div><div><p>MIRA Quest combines a cinematic first-person journey with conversational storytelling, environmental exploration, simple engineering puzzles, and authentic NASA imagery. Players follow signals to Mars and the Moon and meet two historic machines: <strong>Opportunity</strong>, the Mars rover, and <strong>Eagle</strong>, Apollo 11's lunar module.</p><p>The machines' dialogue is fictional, but the mission milestones, scientific concepts, and photographic archive are grounded in NASA sources. Player interaction is the bridge between the two.</p></div></section>
+<section class="mira-steps wrap">
+<span class="eyebrow">05 / HOW IT WORKS</span><h2>From a mysterious signal to a real discovery.</h2>
+<article class="mira-step"><div class="mira-shot"><img loading="lazy" src="https://assets.spaceappschallenge.org/media/images/01__The_two_signals___mission_selection-compr_JRWcnpg.width-1024.png" alt="Choose between Moon and Mars transmissions in MIRA Quest"/></div><div><span class="eyebrow">01 / THE JOURNEY</span><h3>Follow the signal.</h3><p>Players enter their names, answer a mysterious transmission, and choose a destination. Space travel, environmental scanning, and a search sequence build anticipation before the first encounter.</p></div></article>
+<article class="mira-step"><div class="mira-shot"><img loading="lazy" src="https://assets.spaceappschallenge.org/media/images/02__First_contact_with_Opportunity-compressed.width-1024.png" alt="First contact with Opportunity in the Mars chapter"/></div><div><span class="eyebrow">02 / MARS</span><h3>Meet Opportunity.</h3><p>Dialogue and investigations reveal how a planned 90-sol mission lasted 5,111 sols. Players examine evidence of ancient water, discover the rover's instruments, navigate the landscape, and explore authentic NASA photographs—through to the 2018 dust storm.</p></div></article>
+<article class="mira-step"><div class="mira-shot"><img loading="lazy" src="https://assets.spaceappschallenge.org/media/images/05__Eagle_spacecraft_investigation-compressed_pZInQf6.width-1024.png" alt="Investigating Eagle, the Apollo 11 lunar module, on the Moon"/></div><div><span class="eyebrow">03 / THE MOON</span><h3>Investigate Eagle.</h3><p>Players explore the lunar module's ascent and descent stages and learn why part of Eagle remains on the Moon. A simplified landing exercise, mission photography, and lunar experiments make the engineering of Apollo 11 more tangible.</p></div></article>
+<article class="mira-step"><div class="mira-shot"><img loading="lazy" src="https://assets.spaceappschallenge.org/media/images/07__Collected_NASA_photo_archive-compressed.width-1024.png" alt="Collectible NASA photo archive with unlocked mission imagery"/></div><div><span class="eyebrow">04 / THE ARCHIVE</span><h3>Keep what you discover.</h3><p>NASA photographs unlock in a collectible archive. Players can enlarge each image, read its context, and revisit what they learned. Completing both chapters reveals a tribute to the people behind these historic missions.</p></div></article>
+</section>
+<section class="mira-tech"><div class="wrap"><section class="mira-section"><div><span class="eyebrow">06 / DESIGN &amp; IMPLEMENTATION</span><h2>Built to work in the browser, not just in mockups.</h2></div><div><p>I translated the concept into a responsive game using <strong>HTML, CSS, and JavaScript</strong>, integrating cinematic visuals, interactive panoramas, branching dialogue, image magnification, mini-games, ambient audio, and locally saved progress.</p><p>Keyboard navigation, sound controls, and reduced-motion settings were incorporated to make the experience more flexible. AI-assisted development helped move from story and interaction concepts to a functioning browser experience.</p><p><strong>Educational boundaries:</strong> Character dialogue is dramatized, and engineering exercises are simplified for learning. Authentic NASA photographs and data are distinguished from AI-generated reconstructions.</p></div></section></div></section>
+<section class="mira-closing"><span class="eyebrow">07 / THE RESULT</span><h2>Space history, experienced instead of skimmed.</h2><p>MIRA Quest became a playable two-chapter educational adventure, created for a hackathon and built around the idea that curiosity makes facts memorable. It brought together my interests in UX, interactive storytelling, visual design, and front-end implementation in one project.</p><a href="https://mira-quest.vercel.app/svg" target="_blank" rel="noopener noreferrer">Play the game ↗</a><a href="https://www.youtube.com/watch?v=3M7_jcyoQ48svg" target="_blank" rel="noopener noreferrer">Watch the demo ↗</a></section>
+</main><footer class="footer wrap"><span>Esraa Salah · Web &amp; UI/UX Designer</span><span>Egypt · Remote</span></footer><script src="site.js"></script></body></html>
