@@ -11,6 +11,11 @@
 .power-story .power-metadata{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #c9c5ba;border-bottom:1px solid #c9c5ba;margin-top:34px;padding:18px 0;gap:18px}
 .power-story .power-metadata dt{font-size:11px;letter-spacing:.13em;font-weight:800;text-transform:uppercase;color:#6c6c6c;margin-bottom:8px}
 .power-story .power-metadata dd{font-size:15px;font-weight:600;line-height:1.5;margin:0}
+.power-story .power-video{padding:14px 0 56px}
+.power-story .power-video[hidden]{display:none}
+.power-story .power-video .eyebrow{display:block;margin:0 0 14px}
+.power-story .power-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#101516;object-fit:contain;border:1px solid #d4d0c7}
+.power-story .power-video p{color:#57554f;font-size:14px;line-height:1.5;margin:12px 0 0}
 .power-story .power-showcase{padding:40px 0 90px;display:grid;grid-template-columns:minmax(0,1fr) minmax(155px,.24fr);align-items:start;gap:24px}
 .power-story .power-showcase img{display:block;width:100%;height:auto;object-fit:contain;object-position:top}
 .power-story .power-showcase figure{margin:0;min-width:0}
@@ -100,6 +105,17 @@
 <div><dt>Deliverables</dt><dd>Three directions + mixable sections</dd></div>
 <div><dt>Prototype</dt><dd>AI-assisted, interactive staging</dd></div>
 </dl></section>
+<section class="power-video wrap" aria-label="PowerGrid project video" hidden>
+<span class="eyebrow">PROJECT WALKTHROUGH</span>
+<video controls playsinline preload="metadata" poster="assets/heroes/power grid project home page desktop-compressed 1.png" aria-label="PowerGrid Services website design walkthrough">
+<source src="assets/videos/powergrid.mp4" type="video/mp4"/>
+Your browser does not support embedded video.
+</video>
+<p>A walkthrough of the PowerGrid website design system.</p>
+</section>
+<script>
+document.querySelector('.power-video video').addEventListener('loadedmetadata',function(){this.closest('.power-video').hidden=false;},{once:true});
+</script>
 <section class="power-showcase wrap" aria-label="Design A homepage desktop and mobile">
 <figure class="desktop"><figcaption>DESIGN A · FULL DESKTOP HOMEPAGE</figcaption><img fetchpriority="high" decoding="async" src="assets/projects/web projects/power grid project/power grid project home page desktop-compressed.jpg" alt="Full Design A homepage for AMPP showing industrial visual identity, services, and page structure"/></figure>
 <figure class="phone"><figcaption>DESIGN A · FULL MOBILE HOMEPAGE</figcaption><img class="phone-image" decoding="async" src="assets/projects/web projects/power grid project/power grid project home page mobile-compressed.jpg" alt="Full responsive mobile homepage design for AMPP"/></figure>
